@@ -862,7 +862,7 @@ void cmd_usermove(void)
        fputc('\n',ofp);
        fflush(ofp);
      }
-     if (!(flags & XBOARD)) ShowBoard ();
+     if (!(flags & XBOARD) && !(extraflags & NOBOARD)) ShowBoard ();
      SET (flags, THINK);
    }
    else {
@@ -926,8 +926,15 @@ void cmd_show (void)
  ************************************************************************/
 {
    /* TODO Remove gettext support */
-   if (tokeneq (token[1], "board"))
+   if (tokeneq (token[1], "board") || tokeneq (token[1], "white")) {
+      /* Show standard orientation with white at bottom */
       ShowBoard ();
+   }
+   else if (tokeneq (token[1], "black")) {
+      /* Show 180°-rotated orientation with black at bottom */
+      printf(_("Command 'show black' is currently not supported.\n") );
+      /* ShowRotatedBoard (); */
+   }
    else if (tokeneq (token[1], "rating"))
    {
       printf(_("My rating = %d\n"),myrating);
@@ -1316,7 +1323,7 @@ void parse_input(void)
        fputc('\n',ofp);
        fflush(ofp);
      }
-     if (!(flags & XBOARD)) ShowBoard ();
+     if (!(flags & XBOARD) && !(extraflags & NOBOARD)) ShowBoard ();
      SET (flags, THINK);
    }
    else {

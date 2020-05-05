@@ -63,6 +63,7 @@ int RealGameCnt;
 short RealSide;
 int computer;
 unsigned int flags;
+unsigned int extraflags;
 unsigned int preanalyze_flags;
 int cboard[64];
 int Mvboard[64];
@@ -243,7 +244,8 @@ int main (int argc, char *argv[])
 
   int c;
   int opt_help = 0, opt_version = 0, opt_post = 0, opt_xboard = 0, opt_memory = 0,
-      opt_easy = 0, opt_manual = 0, opt_quiet = 0, opt_uci = 0, opt_graphic = 0;
+      opt_easy = 0, opt_manual = 0, opt_quiet = 0, opt_uci = 0, opt_graphic = 0,
+      opt_noboard = 0;
   char opt_addbook[MAXSTR+1] = "";
   char *endptr;
 
@@ -269,6 +271,7 @@ int main (int argc, char *argv[])
         {"uci", 0, 0, 'u'},
         {"addbook", 1, 0, 'a'},
         {"graphic", 0, 0, 'g'},
+        {"noboard", 0, 0, 'n'},
         {0, 0, 0, 0}
     };
 
@@ -276,7 +279,7 @@ int main (int argc, char *argv[])
 
     int option_index = 0;
 
-    c = getopt_long (argc, argv, "qehmpvxgM:ua:",
+    c = getopt_long (argc, argv, "qehmpvxgM:ua:n",
              long_options, &option_index);
 
     /* Detect the end of the options. */
@@ -344,6 +347,9 @@ int main (int argc, char *argv[])
        }
        strcpy( opt_addbook, optarg );
        break;
+     case 'n':
+       opt_noboard = 1;
+       break;
      default:
        puts (_("Option processing failed.\n"));
        abort();
@@ -355,6 +361,7 @@ int main (int argc, char *argv[])
 
   /* initialize control flags */
   flags = ULL(0);
+  extraflags = ULL(0);
 
   /* output for thinking */
   ofp = stdout;
@@ -387,6 +394,7 @@ int main (int argc, char *argv[])
   /* Startup output */
   if ( !( flags & XBOARD ) && ( !opt_quiet ) && ( !opt_uci) ) {
     printf ( _("\
+Copyright (C) 2020 David Yockey\n\
 Copyright (C) %s Free Software Foundation, Inc.\n\
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n\
 This is free software: you are free to change and redistribute it.\n\
@@ -456,6 +464,10 @@ There is NO WARRANTY, to the extent permitted by law.\n"),
     char data[9];
     strcpy( data, "force" );
     SendToEngine( data );
+  }
+  
+  if ( opt_noboard == 1) {
+    SET (extraflags, NOBOARD);
   }
 
   if (argc > 1) {
