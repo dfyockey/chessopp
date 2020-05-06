@@ -311,7 +311,9 @@ void NextEngineCmd( void )
           MakeMove( board.side, &(enginemove->move) );
           strcpy (Game[GameCnt].SANmv, SANmv);
 	  if ( !(flags & XBOARD) ) {
-		  ShowBoard();
+		  if ( !(extraflags & NOBOARD) ) {
+		    ShowBoard();
+		  }
                   dbg_printf("USER <: My move is : %s\n", SANmv);
 		  printf( _("\nMy move is : %s\n"), SANmv );
                   fflush( stdout );
