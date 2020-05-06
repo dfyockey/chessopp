@@ -569,8 +569,12 @@ leaf * ValidateMove (char *s, char *cleanMove)
    if (cleanMove) strcpy(cleanMove, mvstr);
 
    /* Check for castling */
-   if (strcmp (mvstr, "O-O") == 0 || strcmp (mvstr, "o-o") == 0 ||
-       strcmp (mvstr, "0-0") == 0)
+   /** Invalidated o-o and 0-0 as castling commands
+       because the Xboard adapter chokes on these commands 
+                                  -- D. Yockey, 20190809   **/
+   /* if (strcmp (mvstr, "O-O") == 0 || strcmp (mvstr, "o-o") == 0 || */
+   /*     strcmp (mvstr, "0-0") == 0)                                 */
+   if (strcmp (mvstr, "O-O") == 0)
    {
       if (cleanMove) strcpy(cleanMove, "O-O");
       if (side == white)
@@ -584,8 +588,12 @@ leaf * ValidateMove (char *s, char *cleanMove)
       return (IsInMoveList (1, f, t, ' '));
    }
 
-   if (strcmp (mvstr, "O-O-O") == 0 || strcmp (mvstr, "o-o-o") == 0 ||
-       strcmp (mvstr, "0-0-0") == 0)
+   /** Invalidated o-o-o and 0-0-0 as castling commands    
+       because the Xboard adapter chokes on these commands
+                                  -- D. Yockey, 20190809   **/
+   /* if (strcmp (mvstr, "O-O-O") == 0 || strcmp (mvstr, "o-o-o") == 0 || */
+   /*     strcmp (mvstr, "0-0-0") == 0)                                   */
+   if (strcmp (mvstr, "O-O-O") == 0)
    {
       if (cleanMove) strcpy(cleanMove, "O-O-O");
       if (side == white)
@@ -667,7 +675,9 @@ leaf * ValidateMove (char *s, char *cleanMove)
 	    	      return (IsInMoveList (1, f, t, piece));
 	    default :
 		      printf ("Ambiguous move: %s %s\n",s,mvstr);
-		      ShowBoard();
+		      if ( !(extraflags & NOBOARD) ) {
+			ShowBoard();
+		      }
 /*
 		      getchar();
 */
@@ -716,7 +726,9 @@ leaf * ValidateMove (char *s, char *cleanMove)
       if (kount > 1)
       {
 	 printf ("Ambiguous move: %s %s\n",s,mvstr);
-	 ShowBoard();
+	 if ( !(extraflags & NOBOARD) ) {
+	   ShowBoard();
+	 }
 /*
 	 getchar();
 */
@@ -724,6 +736,12 @@ leaf * ValidateMove (char *s, char *cleanMove)
       }
       else if (kount == 0)
    	 return ((leaf *) NULL);
+      else if (n2->move & CASTLING) {
+	/* The Xboard adapter chokes on "king slide" castling,       */
+	/* so I'm invalidating it here to block it from the adapter. */
+	/*                                 -- D. Yockey, 20190814    */
+	return ((leaf *) NULL);
+      }
       else
          return (n2);
    }
@@ -761,7 +779,9 @@ leaf * ValidateMove (char *s, char *cleanMove)
       if (kount > 1)
       {
 	 printf ("Ambiguous move: %s %s\n",s,mvstr);
-	 ShowBoard();
+	 if ( !(extraflags & NOBOARD) ) {
+	   ShowBoard();
+	 }
 /*
 	 getchar();
 */
