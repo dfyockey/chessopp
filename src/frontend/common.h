@@ -269,6 +269,9 @@ typedef struct
 #define HARD    0x4000 /* Pondering is turned on */
 #define ANALYZE 0x8000 /* In ANALYZE mode */
 
+/*  Game flags for new features */
+#define NOBOARD 0x0001 /* Disable automatic board in text mode */
+
 /*  Book modes */
 #define BOOKOFF 0
 #define BOOKRAND 1
@@ -312,6 +315,7 @@ extern short RealSide;
 extern int GameCnt;
 extern int computer;
 extern unsigned int flags;
+extern unsigned int extraflags;  /* Added game flag storage space */
 extern unsigned int preanalyze_flags;
 extern Board board;
 extern int cboard[64];
@@ -467,6 +471,7 @@ void PGNReadFromFile (const char *, int showheading);
 /*  Some output routines */
 void ShowMoveList (int);
 void ShowBoard (void);
+void ShowRotatedBoard (void);
 void ShowCBoard (void);
 void ShowMvboard (void);
 

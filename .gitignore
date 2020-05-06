@@ -62,6 +62,20 @@ m4
 doc/mdate-sh
 doc/texinfo.tex
 
+### Additional items resulting from build that I want to ignore ###
+doc/gnuchess.info
+doc/stamp-vti
+man/gnuchess.1
+src/.deps/
+src/GCint.h
+src/adapter/.deps/
+src/config.h
+src/configmake.h
+src/engine/.deps/
+src/frontend/.deps/
+src/gnuchess
+src/stamp-h1
+
 ### C++ ###
 # Prerequisites
 *.d
