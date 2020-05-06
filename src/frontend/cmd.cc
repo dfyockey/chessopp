@@ -932,8 +932,7 @@ void cmd_show (void)
    }
    else if (tokeneq (token[1], "black")) {
       /* Show 180°-rotated orientation with black at bottom */
-      printf(_("Command 'show black' is currently not supported.\n") );
-      /* ShowRotatedBoard (); */
+      ShowRotatedBoard ();
    }
    else if (tokeneq (token[1], "rating"))
    {

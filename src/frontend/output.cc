@@ -46,6 +46,8 @@ const char black_square[] = "\033[7;35m";
 const char default_console[] = "\033[0m";
 const char blank_place[] = "  ";
 
+unsigned rotate_board = 0;
+
 
 /**************************************************************************
  * Print out the board in a new style way.
@@ -61,6 +63,7 @@ static void GetPiece(const char orig_piece, char *piece);
  * Print out the classical gnuchess board.
  **************************************************************************/
 static void ShowClassicalBoard(const char *boardmap);
+static void ShowRotatedClassicalBoard(const char *boardmap);
 
 
 void ShowTime (void)
@@ -172,10 +175,22 @@ void ShowBoard (void)
    if ( graphicmodeoutput == 1) {
      ShowStylishBoard(arr_board);
    } else {
-     ShowClassicalBoard(arr_board);
+       if (rotate_board != 1)
+         ShowClassicalBoard(arr_board);
+       else
+         ShowRotatedClassicalBoard(arr_board);
    }
 
   fprintf (ofp, "\n");
+  
+  /* Reset board rotation to normal */
+  rotate_board = 0;
+}
+
+
+void ShowRotatedBoard(void) {
+  rotate_board = 1;
+  ShowBoard();
 }
 
 
@@ -287,6 +302,40 @@ void ShowClassicalBoard(const char *boardmap)
   if ( coords == 1 ) {
     fprintf(ofp, "  ");
     for (i = 0; i < 8; ++i) {
+      fprintf(ofp, "%c ", column[i]);
+    }
+  }
+}
+
+
+void ShowRotatedClassicalBoard(const char *boardmap)
+{
+  int i = 0;
+  const char column[8] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
+  unsigned row = 1;
+  
+  for (i = MAX_BOARD_RANGE - 2; i >= 0; --i) {
+    if ((i >= 0) && ((i+1) % 8 == 0)) {
+      fprintf(ofp, "\n");
+    
+      if ( coords == 1 ) {
+        if (row >=1)
+          fprintf(ofp, "%d ", row++);
+        else
+          break;
+      }
+    
+    }
+	
+    fprintf(ofp, "%c ", boardmap[i]);
+  }
+  
+  /* Extra newline needed due to differences from normal board */
+  fprintf(ofp, "\n");
+  
+  if ( coords == 1 ) {
+    fprintf(ofp, "  ");
+    for (i = 7; i >= 0; --i) {
       fprintf(ofp, "%c ", column[i]);
     }
   }
