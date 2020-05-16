@@ -1,5 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 dnl
+dnl Copyright (C) 2020 David Yockey
 dnl Copyright (C) 2001-2020 Free Software Foundation, Inc.
 dnl
 dnl This file is free software; as a special exception the author gives
@@ -10,8 +11,9 @@ dnl This program is distributed in the hope that it will be useful, but
 dnl WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 dnl implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-AC_INIT([GNU Chess], [6.2.6], [bug-gnu-chess@gnu.org], [gnuchess])
+AC_INIT([Chessopp], [0.1], [bug-chessopp@diffengine.net], [chessopp])
 AC_PREREQ(2.69)
+AC_COPYRIGHT(Copyright (C) 2020 David Yockey)
 AC_CONFIG_HEADERS(src/config.h)
 AC_CONFIG_SRCDIR([src/main.cc])
 AM_INIT_AUTOMAKE

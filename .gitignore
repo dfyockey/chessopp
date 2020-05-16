@@ -76,6 +76,11 @@ src/frontend/.deps/
 src/gnuchess
 src/stamp-h1
 
+### Translation-related files to ignore ###
+po/*.po~
+po/*.gmo
+po/remove-potcdate.sed
+
 ### C++ ###
 # Prerequisites
 *.d
