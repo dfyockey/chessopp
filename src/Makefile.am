@@ -18,9 +18,9 @@
 
 bin_SCRIPTS = gnuchessx gnuchessu
 
-bin_PROGRAMS = gnuchess
+bin_PROGRAMS = chessopp
 
-gnuchess_SOURCES = main.cc components.cc components.h
+chessopp_SOURCES = main.cc components.cc components.h
 
 AM_CXXFLAGS = $(PTHREAD_CXXFLAGS)
 
@@ -34,7 +34,7 @@ DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
 DISTCLEANFILES = *~
 
 SUBDIRS = frontend adapter engine
-gnuchess_LDADD = $(LIBINTL) frontend/libfrontend.a adapter/libadapter.a engine/libengine.a
+chessopp_LDADD = $(LIBINTL) frontend/libfrontend.a adapter/libadapter.a engine/libengine.a
 
 configmake.h: Makefile
 	rm -f $@-t $@

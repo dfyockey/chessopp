@@ -74,6 +74,7 @@ src/configmake.h
 src/engine/.deps/
 src/frontend/.deps/
 src/gnuchess
+src/chessopp
 src/stamp-h1
 
 ### Translation-related files to ignore ###
