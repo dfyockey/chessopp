@@ -1,5 +1,6 @@
-# Makefile for gnuchess/man
+# Makefile for chessopp/man
 #
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2015 Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or modify
@@ -15,7 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-man_MANS = gnuchess.1
+man_MANS = chessopp.1
 EXTRA_DIST = $(man_MANS)
 MAINTAINERCLEANFILES = $(man_MANS)
 
@@ -25,8 +26,8 @@ common_mandeps = $(top_srcdir)/configure.ac
 # Depend on the source, not the binary; we don't need to regenerate the
 # binary when any source file changes, only the main one.
 # Use -o so that the `missing' program can infer the output file.
-gnuchess.1: $(top_srcdir)/src/main.cc $(top_srcdir)/src/frontend/cmd.cc $(common_mandeps)
-	$(HELP2MAN) --name='GNU Chess' --info-page='gnuchess' ../src/gnuchess -o $@
+chessopp.1: $(top_srcdir)/src/main.cc $(top_srcdir)/src/frontend/cmd.cc $(common_mandeps)
+	$(HELP2MAN) --name='Chess Opponent' --info-page='chessopp' ../src/chessopp -o $@
 
 CLEANFILES = ${man_MANS}
 DISTCLEANFILES = ${CLEANFILES}

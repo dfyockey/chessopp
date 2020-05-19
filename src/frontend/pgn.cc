@@ -1,8 +1,11 @@
 /* pgn.cc
 
-   GNU Chess frontend
+   Chess Opponent frontend
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2020 Free Software Foundation, Inc.
+
+   Chess Opponent is based on Gnu Chess.
 
    GNU Chess is based on the two research programs
    Cobalt by Chua Kong-Sian and Gazebo by Stuart Cracraft.
@@ -21,8 +24,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    Contact Info:
-     bug-gnu-chess@gnu.org
-     cracraft@ai.mit.edu, cracraft@stanfordalumni.org, cracraft@earthlink.net
+     bug-chessopp@diffengine.net
 */
 
 #include <stdio.h>
@@ -116,17 +118,24 @@ void PGNSaveToFile (const char *file, const char *resultstr)
    }
    fprintf (fp, "[Round \"%s\"]\n", NULL2EMPTY(pgn_round));
 
+    /*
+     * The following previously referred to PROGRAM, which is defined
+     * in version.h, but this prevented changes to the program name
+     * from appearing where this function is called, so it's been
+     * changed to PACKAGE_NAME.
+     */
+
    if (pgn_white)
      fprintf (fp, "[White \"%s\"]\n", pgn_white);
    else if (computer == white)
-     fprintf (fp, "[White \"%s %s\"]\n",PROGRAM,VERSION);
+     fprintf (fp, "[White \"%s %s\"]\n",PACKAGE_NAME,VERSION);
    else
      fprintf (fp, "[White \"%s\"]\n",name);
 
    if (pgn_black)
      fprintf (fp, "[Black \"%s\"]\n", pgn_black);
    else if (computer == black)
-     fprintf (fp, "[Black \"%s %s\"]\n",PROGRAM,VERSION);
+     fprintf (fp, "[Black \"%s %s\"]\n",PACKAGE_NAME,VERSION);
    else
      fprintf (fp, "[Black \"%s\"]\n",name);
 

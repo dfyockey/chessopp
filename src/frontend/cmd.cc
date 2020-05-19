@@ -1,8 +1,11 @@
 /* cmd.cc
 
-   GNU Chess frontend
+   Chess Opponent frontend
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2020 Free Software Foundation, Inc.
+
+   Chess Opponent is based on Gnu Chess.
 
    GNU Chess is based on the two research programs
    Cobalt by Chua Kong-Sian and Gazebo by Stuart Cracraft.
@@ -21,8 +24,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    Contact Info:
-     bug-gnu-chess@gnu.org
-     cracraft@ai.mit.edu, cracraft@stanfordalumni.org, cracraft@earthlink.net
+     bug-chessopp@diffengine.net
 */
 
 #include <stdio.h>
@@ -648,11 +650,19 @@ void cmd_protover(void)
 {
   SetDataToEngine( token[0] );
   return;
+
+    /*
+     * The following previously referred to PROGRAM, which is defined
+     * in version.h, but this prevented changes to the program name
+     * from appearing where this function is called, so it's been
+     * changed to PACKAGE_NAME.
+     */
+
   if (flags & XBOARD) {
     /* Note: change this if "draw" command is added, etc. */
     printf("feature setboard=1 analyze=1 ping=1 draw=0 sigint=0\
  variants=\"normal\" myname=\"%s %s\" done=1\n",
-      PROGRAM, VERSION);
+      PACKAGE_NAME, VERSION);
     fflush(stdout);
   }
 }
@@ -778,7 +788,7 @@ void cmd_usage(void)
       printf ( _("\
 Usage: %s [OPTION]...\n\n"), progname );
       fputs( _("\
-Play the game of chess.\n\n"), stdout );
+Play chess without an onscreen board.\n\n"), stdout );
       fputs( _("Options:\n"), stdout );
       fputs( _("\
  -h, --help         display this help and exit\n"), stdout );
@@ -823,7 +833,7 @@ Play the game of chess.\n\n"), stdout );
  environment variable GNUCHESS_PKGDATADIR.\n\
 \n"), stdout );
       fputs( _("\
-Report bugs to <bug-gnu-chess@gnu.org>.\n\
+Report bugs to <bug-chessopp@gnu.org>.\n\
 \n"), stdout );
      }
 
@@ -877,8 +887,15 @@ void cmd_usermove(void)
 
 void cmd_version(void)
 {
+    /*
+     * The following previously referred to PROGRAM, which is defined
+     * in version.h, but this prevented changes to the program name
+     * from appearing where this function is called, so it's been
+     * changed to PACKAGE_NAME.
+     */
+
    if (!(flags & XBOARD))
-     printf ("%s %s\n", PROGRAM, VERSION);
+     printf ("%s %s\n", PACKAGE_NAME, VERSION);
    else
      printf ("Chess\n");
 }

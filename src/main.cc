@@ -1,6 +1,9 @@
-/* GNU Chess 6 - main.cc - entry point
+/* Chess Opponent - main.cc - entry point
 
+   Copyright (C) 2020 David Yockey
    Copyright (c) 2001-2020 Free Software Foundation, Inc.
+
+   Chess Opponent is based on Gnu Chess.
 
    GNU Chess is based on the two research programs
    Cobalt by Chua Kong-Sian and Gazebo by Stuart Cracraft.
@@ -19,8 +22,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    Contact Info:
-     bug-gnu-chess@gnu.org
-     cracraft@ai.mit.edu, cracraft@stanfordalumni.org, cracraft@earthlink.net
+     bug-chessopp@diffengine.net
 */
 
 #include "components.h"
@@ -394,8 +396,8 @@ int main (int argc, char *argv[])
   /* Startup output */
   if ( !( flags & XBOARD ) && ( !opt_quiet ) && ( !opt_uci) ) {
     printf ( _("\
-Copyright (C) 2020 David Yockey\n\
-Copyright (C) %s Free Software Foundation, Inc.\n\
+Based on GNU Chess 6.2.6\n\
+Copyright (C) %s David Yockey\n\
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n\
 This is free software: you are free to change and redistribute it.\n\
 There is NO WARRANTY, to the extent permitted by law.\n"),

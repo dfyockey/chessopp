@@ -66,6 +66,7 @@ doc/texinfo.tex
 doc/gnuchess.info
 doc/stamp-vti
 man/gnuchess.1
+man/chessopp.1
 src/.deps/
 src/GCint.h
 src/adapter/.deps/
