@@ -1,7 +1,8 @@
 # Process this file with automake to produce Makefile.in (in this,
 # and all subdirectories).
-# Makefile for the top-level directory of GNU Chess.
+# Makefile for the top-level directory of Chess Opponent.
 #
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2001-2015 Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or modify

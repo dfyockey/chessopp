@@ -1,6 +1,7 @@
 # Process this file with automake to produce Makefile.in 
-# Makefile for gnuchess/src.
+# Makefile for chessopp/src.
 #
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2001-2011 Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or modify
