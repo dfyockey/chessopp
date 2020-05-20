@@ -816,6 +816,8 @@ Play chess without an onscreen board.\n\n"), stdout );
  -a filename, --addbook=filename   compile book.bin from pgn book 'filename'\n"), stdout );
       fputs( _("\
  -g, --graphic      enable graphic mode\n"), stdout );
+       fputs( _("\
+ -b, --board        show board after each move (gnuchess mode\n"), stdout );
       fputs( _("\
 \n"), stdout );
       fputs( _("\
@@ -828,7 +830,7 @@ Play chess without an onscreen board.\n\n"), stdout );
 \n"), stdout );
       fputs( _("\
  The file 'gnuchess.ini' allows setting config options. See\n\
- 'info gnuchess' for details. The file will be looked up in the current\n\
+ 'info chessopp' for details. The file will be looked up in the current\n\
  directory or, if not found there, in the directory pointed to by\n\
  environment variable GNUCHESS_PKGDATADIR.\n\
 \n"), stdout );

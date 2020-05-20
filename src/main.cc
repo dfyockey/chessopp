@@ -247,7 +247,7 @@ int main (int argc, char *argv[])
   int c;
   int opt_help = 0, opt_version = 0, opt_post = 0, opt_xboard = 0, opt_memory = 0,
       opt_easy = 0, opt_manual = 0, opt_quiet = 0, opt_uci = 0, opt_graphic = 0,
-      opt_noboard = 0;
+      opt_board = 0;
   char opt_addbook[MAXSTR+1] = "";
   char *endptr;
 
@@ -273,7 +273,7 @@ int main (int argc, char *argv[])
         {"uci", 0, 0, 'u'},
         {"addbook", 1, 0, 'a'},
         {"graphic", 0, 0, 'g'},
-        {"noboard", 0, 0, 'n'},
+        {"board", 0, 0, 'b'},
         {0, 0, 0, 0}
     };
 
@@ -281,7 +281,7 @@ int main (int argc, char *argv[])
 
     int option_index = 0;
 
-    c = getopt_long (argc, argv, "qehmpvxgM:ua:n",
+    c = getopt_long (argc, argv, "qehmpvxgM:ua:b",
              long_options, &option_index);
 
     /* Detect the end of the options. */
@@ -349,8 +349,8 @@ int main (int argc, char *argv[])
        }
        strcpy( opt_addbook, optarg );
        break;
-     case 'n':
-       opt_noboard = 1;
+     case 'b':
+       opt_board = 1;
        break;
      default:
        puts (_("Option processing failed.\n"));
@@ -468,7 +468,7 @@ There is NO WARRANTY, to the extent permitted by law.\n"),
     SendToEngine( data );
   }
   
-  if ( opt_noboard == 1) {
+  if ( opt_board == 0) {
     SET (extraflags, NOBOARD);
   }
 
