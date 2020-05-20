@@ -1,8 +1,11 @@
 /* option.cpp
 
-   GNU Chess protocol adapter
+   Chess Opponent protocol adapter
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2011 Free Software Foundation, Inc.
+
+   Chess Opponent is based on Gnu Chess.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -104,7 +107,7 @@ void option_init() {
 
    // option file
 
-   const char optionName[]="gnuchess.ini";
+   const char optionName[]="chessopp.ini";
    char optionFile[MaxFileNameSize+1];
    FILE *of;
    if ( ( of = fopen(optionName, "r") ) != NULL ) {

@@ -1,8 +1,11 @@
 /* util.cpp
 
-   GNU Chess protocol adapter
+   Chess Opponent protocol adapter
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2011 Free Software Foundation, Inc.
+
+   Chess Opponent is based on Gnu Chess.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -422,7 +425,7 @@ double my_timer_cpu_usage(const my_timer_t * timer) {
 char const * compute_pkgdatadir ()
 {
 
-   char const *pkgdatadir = getenv ("GNUCHESS_PKGDATADIR");
+   char const *pkgdatadir = getenv ("CHESSOPP_PKGDATADIR");
    return pkgdatadir ? pkgdatadir : PKGDATADIR;
 }
 

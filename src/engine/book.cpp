@@ -1,8 +1,11 @@
 /* book.cpp
 
-   GNU Chess engine
+   Chess Opponent engine
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2014 Free Software Foundation, Inc.
+
+   Chess Opponent is based on Gnu Chess.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -272,7 +275,7 @@ static uint64 read_integer(FILE * file, int size) {
 
 static char const * compute_pkgdatadir ()
 {
-   char const *pkgdatadir = getenv ("GNUCHESS_PKGDATADIR");
+   char const *pkgdatadir = getenv ("CHESSOPP_PKGDATADIR");
    return pkgdatadir ? pkgdatadir : PKGDATADIR;
 }
 

@@ -829,10 +829,10 @@ Play chess without an onscreen board.\n\n"), stdout );
  in coordinate algebraic notation.\n\
 \n"), stdout );
       fputs( _("\
- The file 'gnuchess.ini' allows setting config options. See\n\
+ The file 'chessopp.ini' allows setting config options. See\n\
  'info chessopp' for details. The file will be looked up in the current\n\
  directory or, if not found there, in the directory pointed to by\n\
- environment variable GNUCHESS_PKGDATADIR.\n\
+ environment variable CHESSOPP_PKGDATADIR.\n\
 \n"), stdout );
       fputs( _("\
 Report bugs to <bug-chessopp@gnu.org>.\n\
