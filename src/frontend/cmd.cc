@@ -829,10 +829,11 @@ Play chess without an onscreen board.\n\n"), stdout );
  in coordinate algebraic notation.\n\
 \n"), stdout );
       fputs( _("\
- The file 'chessopp.ini' allows setting config options. See\n\
- 'info chessopp' for details. The file will be looked up in the current\n\
- directory or, if not found there, in the directory pointed to by\n\
- environment variable CHESSOPP_PKGDATADIR.\n\
+ The file 'chessopp.ini' allows setting config options. For details,\n\
+ see 'info gnuchess' (which substantially applies to and is installed\n\
+ with chessopp). The file will be looked up in the current directory\n\
+ or, if not found there, in the directory pointed to by environment\n\
+ variable CHESSOPP_PKGDATADIR.\n\
 \n"), stdout );
       fputs( _("\
 Report bugs to <bug-chessopp@gnu.org>.\n\
@@ -1134,7 +1135,9 @@ static const char * const helpstr[] = {
    "usage",
    gettext_noop(" Displays command line syntax."),
    "show",
-   gettext_noop(" board - displays the current board"),
+   gettext_noop(" black - displays the current board from black's point of view"),
+   gettext_noop(" white - displays the current board from white's point of view"),
+   gettext_noop(" board - displays the current board (deprecated synonym for white)"),
    gettext_noop(" time - displays the time settings"),
    gettext_noop(" moves - shows all moves using one call to routine"),
    gettext_noop(" escape - shows moves that escape from check using one call to routine"),
