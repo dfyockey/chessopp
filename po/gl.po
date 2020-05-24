@@ -1,27 +1,26 @@
-# Galician translation of gnuchess.
-# This file is distributed under the same license as the gnuchess package.
+# Galician translation of chessopp.
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2014 Free Software Foundation, Inc.
 # Copyright (C) 2014 Leandro Regueiro.
-#
-# Leandro Regueiro <leandro.regueiro@gmail.com>, 2014.
-#
-# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
-# colaborar connosco, podes atopar máis información en http://www.trasno.net
-#
+# This file is distributed under the same license as the chessopp package.
+# 
+# Translators:
+# David Yockey greatly assisted by Google Translate, 2020.
+# Leandro Regueiro, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnuchess 6.1.1\n"
+"Project-Id-Version: chessopp 0.1\n"
 "Report-Msgid-Bugs-To: bug-gnu-chess@gnu.org\n"
 "POT-Creation-Date: 2020-05-16 16:28-0400\n"
-"PO-Revision-Date: 2014-05-10 17:27+0100\n"
-"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
+"PO-Revision-Date: 2020-05-22 11:28-0400\n"
+"Last-Translator: David Yockey greatly assisted by Google Translate\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Bugs: Report translation errors to bug-chessopp@gnu.org\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/main.cc:328
 #, c-format
@@ -40,8 +39,8 @@ msgstr ""
 #: src/main.cc:396
 #, c-format
 msgid ""
-"Copyright (C) 2020 David Yockey\n"
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Based on GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
 "html>\n"
 "This is free software: you are free to change and redistribute it.\n"
@@ -322,6 +321,9 @@ msgstr ""
 msgid " -g, --graphic      enable graphic mode\n"
 msgstr " -g, --graphic      activar o modo gráfico\n"
 
+msgid " -b, --board        display board after each move (gnuchess mode)\n"
+msgstr ""
+
 #: src/frontend/cmd.cc:811
 msgid ""
 " Options xboard and post are accepted without leading dashes\n"
@@ -338,19 +340,20 @@ msgstr ""
 
 #: src/frontend/cmd.cc:819
 msgid ""
-" The file 'gnuchess.ini' allows setting config options. See\n"
-" 'info gnuchess' for details. The file will be looked up in the current\n"
-" directory or, if not found there, in the directory pointed to by\n"
-" environment variable GNUCHESS_PKGDATADIR.\n"
+" The file 'chessopp.ini' allows setting config options. For details,\n"
+" see 'info gnuchess' (which substantially applies to and is installed\n"
+" with chessopp). The file will be looked up in the current directory\n"
+" or, if not found there, in the directory pointed to by environment\n"
+" variable CHESSOPP_PKGDATADIR.\n"
 "\n"
 msgstr ""
 
 #: src/frontend/cmd.cc:825
 msgid ""
-"Report bugs to <bug-gnu-chess@gnu.org>.\n"
+"Report bugs to <bug-chessopp@diffengine.net>.\n"
 "\n"
 msgstr ""
-"Comunique os erros a <bug-gnu-chess@gnu.org>.\n"
+"Comunique os erros a <bug-chessopp@diffengine.net>.\n"
 "\n"
 
 #: src/frontend/cmd.cc:873 src/frontend/cmd.cc:1333
@@ -454,7 +457,7 @@ msgstr ""
 
 #: src/frontend/cmd.cc:1029
 msgid " Prints out the version of this program."
-msgstr "Mostra a versión deste programa."
+msgstr " Mostra a versión deste programa."
 
 #: src/frontend/cmd.cc:1032
 msgid " Backs up one move in pgn loaded game."
@@ -466,7 +469,7 @@ msgstr ""
 
 #: src/frontend/cmd.cc:1036
 msgid " Loads the game in the file into memory."
-msgstr "Carga a partida á memoria desde o ficheiro."
+msgstr " Carga a partida á memoria desde o ficheiro."
 
 #: src/frontend/cmd.cc:1038
 msgid ""
@@ -476,15 +479,15 @@ msgstr ""
 
 #: src/frontend/cmd.cc:1042
 msgid " Advances one move in pgn loaded game."
-msgstr "Avanza un movemento na partida de pgn cargada."
+msgstr " Avanza un movemento na partida de pgn cargada."
 
 #: src/frontend/cmd.cc:1044
 msgid " Goes to begin position of pgn loaded game."
-msgstr "Vai á posición inicial da partida de pgn cargada."
+msgstr " Vai á posición inicial da partida de pgn cargada."
 
 #: src/frontend/cmd.cc:1046
 msgid " Goes to end position of pgn loaded game."
-msgstr "Vai á posición final da partida de pgn cargada."
+msgstr " Vai á posición final da partida de pgn cargada."
 
 #: src/frontend/cmd.cc:1049
 msgid ""
@@ -494,11 +497,11 @@ msgstr ""
 
 #: src/frontend/cmd.cc:1053
 msgid " Program plays white."
-msgstr "O programa xoga con brancas."
+msgstr " O programa xoga con brancas."
 
 #: src/frontend/cmd.cc:1055
 msgid " Program plays black."
-msgstr "O programa xoga con negras."
+msgstr " O programa xoga con negras."
 
 #: src/frontend/cmd.cc:1057
 msgid ""
@@ -619,7 +622,13 @@ msgid " Displays command line syntax."
 msgstr ""
 
 #: src/frontend/cmd.cc:1118
-msgid " board - displays the current board"
+msgid " black - displays the current board from black's point of view"
+msgstr ""
+
+msgid " white - displays the current board from white's point of view"
+msgstr ""
+
+msgid " board - displays the current board (deprecated)"
 msgstr ""
 
 #: src/frontend/cmd.cc:1119

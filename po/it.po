@@ -1,22 +1,24 @@
-# Italian translation of gnuchess.
+# Italian translation of chessopp.
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2018 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnuchess package.
-# Sebastiano Pistore <sebastianopistore.info@protonmail.ch>, 2018-2019
-#
+# This file is distributed under the same license as the chessopp package.
+# 
+# Translators:
+# David Yockey greatly assisted by Google Translate, 2020.
+# Sebastiano Pistore, 2018-2019
 msgid ""
 msgstr ""
-"Project-Id-Version: gnuchess 6.2.5-rc3\n"
+"Project-Id-Version: chessopp 0.1\n"
 "Report-Msgid-Bugs-To: bug-gnu-chess@gnu.org\n"
 "POT-Creation-Date: 2020-05-16 16:28-0400\n"
-"PO-Revision-Date: 2019-10-16 10:58+0200\n"
-"Last-Translator: Sebastiano Pistore <sebastianopistore.info@protonmail.ch>\n"
-"Language-Team: Italian <tp@lists.linux.it>\n"
+"PO-Revision-Date: 2020-05-22 11:56-0400\n"
+"Last-Translator: David Yockey greatly assisted by Google Translate\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Bugs: Report translation errors to bug-chessopp@gnu.org\n"
+"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/main.cc:328
@@ -25,26 +27,26 @@ msgid "Memory out of range or invalid.\n"
 msgstr ""
 
 #: src/main.cc:345
-#, fuzzy, c-format
+#, c-format
 msgid "File name is too long (max = %d).\n"
-msgstr "%s: il nome del file è troppo lungo (max %d); non archiviato"
+msgstr "il nome del file è troppo lungo (max %d); non archiviato\n"
 
 #: src/main.cc:354
-#, fuzzy
 msgid "Option processing failed.\n"
-msgstr "elaborazione opzione IA non riuscita\\n"
+msgstr "elaborazione opzione IA non riuscita\n"
 
 #: src/main.cc:396
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Copyright (C) 2020 David Yockey\n"
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Based on GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
 "html>\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
-"Copyright © %s Free Software Foundation, Inc.\n"
+"Basato su GNU Chess 6.2.6\n"
+"Copyright © %s David Yockey\n"
 "Licenza GPLv3+: GNU GPL versione 3 o successive <http://gnu.org/licenses/gpl."
 "html>.\n"
 "Questo è software libero: siete liberi di modificarlo e ridistribuirlo.\n"
@@ -56,14 +58,14 @@ msgid "Thinking...\n"
 msgstr "Sto pensando...\n"
 
 #: src/frontend/cmd.cc:102
-#, fuzzy, c-format
+#, c-format
 msgid "Command 'activate' is currently not supported.\n"
-msgstr "Comando 'attiva' non è attualmente supportato."
+msgstr "Comando 'attiva' non è attualmente supportato.\n"
 
 #: src/frontend/cmd.cc:132
-#, fuzzy, c-format
+#, c-format
 msgid "Command 'black' is currently not supported.\n"
-msgstr "Comando 'nero' non è supportato."
+msgstr "Comando 'nero' non è supportato.\n"
 
 #: src/frontend/cmd.cc:141
 #, c-format
@@ -74,29 +76,29 @@ msgid ""
 msgstr ""
 
 #: src/frontend/cmd.cc:148
-#, fuzzy, c-format
+#, c-format
 msgid "Book is now on.\n"
-msgstr "libro ora è spento"
+msgstr "libro ora è attivo\n"
 
 #: src/frontend/cmd.cc:151
-#, fuzzy, c-format
+#, c-format
 msgid "Book is now off.\n"
-msgstr "libro ora è spento"
+msgstr "libro ora è spento\n"
 
 #: src/frontend/cmd.cc:154
-#, fuzzy, c-format
+#, c-format
 msgid "Book is now best.\n"
-msgstr "libro ora è spento"
+msgstr ""
 
 #: src/frontend/cmd.cc:157
-#, fuzzy, c-format
+#, c-format
 msgid "Book is now worst.\n"
-msgstr "libro ora è spento"
+msgstr ""
 
 #: src/frontend/cmd.cc:160
-#, fuzzy, c-format
+#, c-format
 msgid "Book is now random.\n"
-msgstr "libro ora è spento"
+msgstr ""
 
 #: src/frontend/cmd.cc:162
 #, c-format
@@ -162,9 +164,9 @@ msgid "Error reading contents of file '%s'.\n"
 msgstr "Errore nella lettura del file '%s'\n"
 
 #: src/frontend/cmd.cc:389
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open %s for writing: %s\n"
-msgstr "Fallita l'apertura di «%s» per scrittura: %s"
+msgstr "Fallita l'apertura di «%s» per scrittura: %s\n"
 
 #: src/frontend/cmd.cc:395
 #, c-format
@@ -172,15 +174,15 @@ msgid "Could not create logfile, all slots occupied.\n"
 msgstr ""
 
 #: src/frontend/cmd.cc:396
-#, fuzzy, c-format
+#, c-format
 msgid "You may consider deleting or renaming your existing logfiles.\n"
 msgstr ""
-"Si può considerare eliminando o rinominando il file di registro esistente."
+"Si può considerare eliminando o rinominando il file di registro esistente.\n"
 
 #: src/frontend/cmd.cc:429
-#, fuzzy, c-format
+#, c-format
 msgid "Null-move heuristic is on.\n"
-msgstr "Null-euristiche è su."
+msgstr "Null-euristiche è su.\n"
 
 #: src/frontend/cmd.cc:431
 #, c-format
@@ -295,9 +297,8 @@ msgid " -x, --xboard       start in engine mode\n"
 msgstr ""
 
 #: src/frontend/cmd.cc:795
-#, fuzzy
 msgid " -p, --post         start up showing thinking\n"
-msgstr "-p, --post start up che mostra il pensiero"
+msgstr " -p, --post start up che mostra il pensiero\n"
 
 #: src/frontend/cmd.cc:797
 msgid " -e, --easy         disable thinking in opponents time\n"
@@ -308,12 +309,11 @@ msgid " -m, --manual       enable manual mode\n"
 msgstr " -m, --manual       abilita modalità manuale\n"
 
 #: src/frontend/cmd.cc:801
-#, fuzzy
 msgid ""
 " -u, --uci          enable UCI protocol (externally behave as UCI engine)\n"
 msgstr ""
-"-u, - uci abilitare il protocollo UCI (esternamente si comportano come "
-"motore UCI)"
+" -u, - uci          abilitare il protocollo UCI (esternamente si comportano "
+"come motore UCI)\n"
 
 #: src/frontend/cmd.cc:803
 msgid " -M size, --memory=size   specify memory usage in MB for hashtable\n"
@@ -331,6 +331,9 @@ msgstr ""
 msgid " -g, --graphic      enable graphic mode\n"
 msgstr " -g, --graphic      abilita modalità grafica\n"
 
+msgid " -b, --board        display board after each move (gnuchess mode)\n"
+msgstr ""
+
 #: src/frontend/cmd.cc:811
 msgid ""
 " Options xboard and post are accepted without leading dashes\n"
@@ -347,19 +350,20 @@ msgstr ""
 
 #: src/frontend/cmd.cc:819
 msgid ""
-" The file 'gnuchess.ini' allows setting config options. See\n"
-" 'info gnuchess' for details. The file will be looked up in the current\n"
-" directory or, if not found there, in the directory pointed to by\n"
-" environment variable GNUCHESS_PKGDATADIR.\n"
+" The file 'chessopp.ini' allows setting config options. For details,\n"
+" see 'info gnuchess' (which substantially applies to and is installed\n"
+" with chessopp). The file will be looked up in the current directory\n"
+" or, if not found there, in the directory pointed to by environment\n"
+" variable CHESSOPP_PKGDATADIR.\n"
 "\n"
 msgstr ""
 
 #: src/frontend/cmd.cc:825
 msgid ""
-"Report bugs to <bug-gnu-chess@gnu.org>.\n"
+"Report bugs to <bug-chessopp@diffengine.net>.\n"
 "\n"
 msgstr ""
-"Segnalare i bug a <bug-gnu-chess@gnu.org>.\n"
+"Segnalare i bug a <bug-chessopp@diffengine.net>.\n"
 "\n"
 
 #: src/frontend/cmd.cc:873 src/frontend/cmd.cc:1333
@@ -412,9 +416,9 @@ msgid "Command 'show eval/score' is currently not supported.\n"
 msgstr ""
 
 #: src/frontend/cmd.cc:985
-#, fuzzy, c-format
+#, c-format
 msgid "Command 'show pin' is currently not supported.\n"
-msgstr "Perno di comando 'show' non è attualmente supportato."
+msgstr "Perno di comando 'show' non è attualmente supportato.\n"
 
 #: src/frontend/cmd.cc:997
 #, c-format
@@ -446,9 +450,8 @@ msgid " off - disables use of book"
 msgstr ""
 
 #: src/frontend/cmd.cc:1024
-#, fuzzy
 msgid " worst - plays worst move from book"
-msgstr "peggiore - ascolti peggiore spostare dal libro"
+msgstr " peggiore - ascolti peggiore spostare dal libro"
 
 #: src/frontend/cmd.cc:1025
 msgid " best - plays best move from book"
@@ -459,27 +462,24 @@ msgid " prefer - same as 'book on' (default)"
 msgstr ""
 
 #: src/frontend/cmd.cc:1027
-#, fuzzy
 msgid " random - plays any move from book"
-msgstr "casuale - Gioca qualsiasi mossa dal libro"
+msgstr " casuale - Gioca qualsiasi mossa dal libro"
 
 #: src/frontend/cmd.cc:1029
 msgid " Prints out the version of this program."
 msgstr ""
 
 #: src/frontend/cmd.cc:1032
-#, fuzzy
 msgid " Backs up one move in pgn loaded game."
-msgstr "Esegue il backup di uno spostare in pgn caricato gioco."
+msgstr " Esegue il backup di uno spostare in pgn caricato gioco."
 
 #: src/frontend/cmd.cc:1034
 msgid " Saves the game so far from memory to the file."
 msgstr ""
 
 #: src/frontend/cmd.cc:1036
-#, fuzzy
 msgid " Loads the game in the file into memory."
-msgstr "Carica il gioco nel file in memoria."
+msgstr " Carica il gioco nel file in memoria."
 
 #: src/frontend/cmd.cc:1038
 msgid ""
@@ -496,18 +496,16 @@ msgid " Goes to begin position of pgn loaded game."
 msgstr ""
 
 #: src/frontend/cmd.cc:1046
-#, fuzzy
 msgid " Goes to end position of pgn loaded game."
-msgstr "Va per la posizione finale del pgn caricato il gioco."
+msgstr " Va per la posizione finale del pgn caricato il gioco."
 
 #: src/frontend/cmd.cc:1049
-#, fuzzy
 msgid ""
 " Makes the program stop moving. You may now enter moves\n"
 " to reach some position in the future."
 msgstr ""
-"Rende il programma smettere di muoversi. È ora possibile immettere mosse per "
-"raggiungere qualche posizione in futuro."
+" Rende il programma smettere di muoversi. È ora possibile immettere mosse "
+"per raggiungere qualche posizione in futuro."
 
 #: src/frontend/cmd.cc:1053
 msgid " Program plays white."
@@ -530,9 +528,8 @@ msgid ""
 msgstr ""
 
 #: src/frontend/cmd.cc:1063
-#, fuzzy
 msgid " Turns off verbose thinking output."
-msgstr "Disattiva l'output dettagliato del pensiero."
+msgstr " Disattiva l'output dettagliato del pensiero."
 
 #: src/frontend/cmd.cc:1065
 msgid ""
@@ -554,10 +551,9 @@ msgid ""
 msgstr ""
 
 #: src/frontend/cmd.cc:1076
-#, fuzzy
 msgid " Inputs the estimated rating for computer and for its opponent."
 msgstr ""
-"Inserisce la valutazione stimata per il computer e per il suo avversario."
+" Inserisce la valutazione stimata per il computer e per il suo avversario."
 
 #: src/frontend/cmd.cc:1078
 msgid " Sets up a new game (i.e. pieces in original positions)."
@@ -598,15 +594,14 @@ msgid " off - disables use of xboard/winboard"
 msgstr " off - disattiva l'uso di xboard/winboard"
 
 #: src/frontend/cmd.cc:1094
-#, fuzzy
 msgid ""
 " Sets the program to look N ply (half-moves) deep for every\n"
 " search it performs. If there is a checkmate or other condition\n"
 " that does not allow that depth, then it will not be."
 msgstr ""
-"Imposta il programma per cercare profondo strato N (metà-mosse) ogni ricerca "
-"che esegue. Se c'è uno scacco matto o altra condizione che non consente tale "
-"profondità, quindi non sarà."
+" Imposta il programma per cercare profondo strato N (metà-mosse) ogni "
+"ricerca che esegue. Se c'è uno scacco matto o altra condizione che non "
+"consente tale profondità, quindi non sarà."
 
 #: src/frontend/cmd.cc:1098
 msgid ""
@@ -615,9 +610,8 @@ msgid ""
 msgstr ""
 
 #: src/frontend/cmd.cc:1102
-#, fuzzy
 msgid " Loads a position in EPD format from disk into memory."
-msgstr "Carica una posizione in formato EPD dal disco in memoria."
+msgstr " Carica una posizione in formato EPD dal disco in memoria."
 
 #: src/frontend/cmd.cc:1105
 msgid " Saves game position into EPD format from memory to disk."
@@ -640,12 +634,17 @@ msgid " Backs up one move in game history."
 msgstr ""
 
 #: src/frontend/cmd.cc:1116
-#, fuzzy
 msgid " Displays command line syntax."
-msgstr "Visualizza la sintassi del comando."
+msgstr " Visualizza la sintassi del comando."
 
 #: src/frontend/cmd.cc:1118
-msgid " board - displays the current board"
+msgid " black - displays the current board from black's point of view"
+msgstr ""
+
+msgid " white - displays the current board from white's point of view"
+msgstr ""
+
+msgid " board - displays the current board (deprecated)"
 msgstr ""
 
 #: src/frontend/cmd.cc:1119
@@ -661,9 +660,8 @@ msgid " escape - shows moves that escape from check using one call to routine"
 msgstr ""
 
 #: src/frontend/cmd.cc:1122
-#, fuzzy
 msgid " noncapture - shows non-capture moves"
-msgstr "noncapture - spettacoli acquisizione mosse"
+msgstr " noncapture - spettacoli acquisizione mosse"
 
 #: src/frontend/cmd.cc:1123
 msgid " capture - shows capture moves"
@@ -682,10 +680,9 @@ msgid " pin - shows pinned pieces"
 msgstr ""
 
 #: src/frontend/cmd.cc:1128
-#, fuzzy
 msgid " movelist - reads in an epd file and shows legal moves for its entries"
 msgstr ""
-"movelist - legge in un file epd e mostra le mosse legali per le sue voci"
+" movelist - legge in un file epd e mostra le mosse legali per le sue voci"
 
 #: src/frontend/cmd.cc:1129
 msgid ""
@@ -693,9 +690,8 @@ msgid ""
 msgstr ""
 
 #: src/frontend/cmd.cc:1130
-#, fuzzy
 msgid " movegenspeed - tests speed of move generator"
-msgstr "movegenspeed - test velocità di spostare il generatore"
+msgstr " movegenspeed - test velocità di spostare il generatore"
 
 #: src/frontend/cmd.cc:1131
 msgid " capturespeed - tests speed of capture move generator"
@@ -727,12 +723,11 @@ msgid ""
 msgstr ""
 
 #: src/frontend/cmd.cc:1143
-#, fuzzy
 msgid ""
 " Does not display the chessboard rank nor file in either mode (graphic nor "
 "classical)."
 msgstr ""
-"Non visualizza il rango di scacchiera né file in entrambe le modalità "
+" Non visualizza il rango di scacchiera né file in entrambe le modalità "
 "(grafica né classica)"
 
 #: src/frontend/cmd.cc:1169

@@ -1,21 +1,24 @@
-# Traduction française de gnuchess
+# Traduction française de chessopp
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2013 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnuchess package.
-# Stéphane Aulery <lkppo@free.fr>, 2015, 2017.
-#
+# This file is distributed under the same license as the chessopp package.
+# 
+# Translators:
+# David Yockey greatly assisted by Google Translate, 2020.
+# Stéphane Aulery, 2015, 2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnuchess 6.2.5-rc3\n"
+"Project-Id-Version: chessopp 0.1\n"
 "Report-Msgid-Bugs-To: bug-gnu-chess@gnu.org\n"
 "POT-Creation-Date: 2020-05-16 16:28-0400\n"
-"PO-Revision-Date: 2017-08-21 22:42+0200\n"
-"Last-Translator: Stéphane Aulery <lkppo@free.fr>\n"
-"Language-Team: French <traduc@traduc.org>\n"
+"PO-Revision-Date: 2020-05-22 11:22-0400\n"
+"Last-Translator: David Yockey greatly assisted by Google Translate\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Bugs: Report translation errors to bug-chessopp@gnu.org\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/main.cc:328
 #, fuzzy, c-format
@@ -33,16 +36,17 @@ msgid "Option processing failed.\n"
 msgstr "Analyse des options échouée\n"
 
 #: src/main.cc:396
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Copyright (C) 2020 David Yockey\n"
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Based on GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
 "html>\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Basé sur GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "License GPLv3+ : GNU GPL version 3 ou ultérieure <http://gnu.org/licenses/"
 "gpl.html>\n"
 "Ceci est un logiciel libre: vous pouvez le modifier et le redistribuer "
@@ -333,6 +337,9 @@ msgstr ""
 msgid " -g, --graphic      enable graphic mode\n"
 msgstr " -g, --graphic      activer le mode graphique\n"
 
+msgid " -b, --board        display board after each move (gnuchess mode)\n"
+msgstr " -b, --board        afficher le plateau après chaque mouvement\n"
+
 #: src/frontend/cmd.cc:811
 msgid ""
 " Options xboard and post are accepted without leading dashes\n"
@@ -349,31 +356,32 @@ msgid ""
 " in coordinate algebraic notation.\n"
 "\n"
 msgstr ""
-"Les mouvements sont acceptés en notation algébrique standard (SAN) ou\n"
+" Les mouvements sont acceptés en notation algébrique standard (SAN) ou\n"
 "notation algébrique de coordonnées.\n"
 "\n"
 
 #: src/frontend/cmd.cc:819
 msgid ""
-" The file 'gnuchess.ini' allows setting config options. See\n"
-" 'info gnuchess' for details. The file will be looked up in the current\n"
-" directory or, if not found there, in the directory pointed to by\n"
-" environment variable GNUCHESS_PKGDATADIR.\n"
+" The file 'chessopp.ini' allows setting config options. For details,\n"
+" see 'info gnuchess' (which substantially applies to and is installed\n"
+" with chessopp). The file will be looked up in the current directory\n"
+" or, if not found there, in the directory pointed to by environment\n"
+" variable CHESSOPP_PKGDATADIR.\n"
 "\n"
 msgstr ""
-" Le fichier « gnuchess.ini » permet les options de configuration de\n"
+" Le fichier « chessopp.ini » permet les options de configuration de\n"
 " préférences. Voir « info gnuchess » pour plus d’informations. Le fichier "
 "sera\n"
 " recherche dans le dossier courant ou, s’il est introuvable, dans le "
 "répertoire\n"
-" pointé par la variable d’environnement GNUCHESS_PKGDATADIR.\n"
+" pointé par la variable d’environnement CHESSOPP_PKGDATADIR.\n"
 
 #: src/frontend/cmd.cc:825
 msgid ""
-"Report bugs to <bug-gnu-chess@gnu.org>.\n"
+"Report bugs to <bug-chessopp@diffengine.net>.\n"
 "\n"
 msgstr ""
-"Rapporter un bug à <bug-gnu-chess@gnu.org>.\n"
+"Rapporter un bug à <bug-chessopp@diffengine.net>.\n"
 "\n"
 
 #: src/frontend/cmd.cc:873 src/frontend/cmd.cc:1333
@@ -550,7 +558,7 @@ msgstr ""
 
 #: src/frontend/cmd.cc:1063
 msgid " Turns off verbose thinking output."
-msgstr " Désactive la sortie verbeuse du calcul"
+msgstr " Désactive la sortie verbeuse du calcul."
 
 #: src/frontend/cmd.cc:1065
 msgid ""
@@ -573,7 +581,7 @@ msgid ""
 " alter those conditions. So you would have to undo a move or two, or\n"
 " add time to the clock with 'level' or 'time'."
 msgstr ""
-"Cette commande réactive un jeu qui a été terminé automatiquement\n"
+" Cette commande réactive un jeu qui a été terminé automatiquement\n"
 "suite à un échec et mat ou un temps épuisé. Par contre, elle ne modifie pas\n"
 "les conditions. Vous devrez donc annuler un coup ou deux, ou ajouter du "
 "temps à\n"
@@ -581,12 +589,12 @@ msgstr ""
 
 #: src/frontend/cmd.cc:1076
 msgid " Inputs the estimated rating for computer and for its opponent."
-msgstr "Entrer le score estimé de l’ordinateur et de son adversaire."
+msgstr " Entrer le score estimé de l’ordinateur et de son adversaire."
 
 #: src/frontend/cmd.cc:1078
 msgid " Sets up a new game (i.e. pieces in original positions)."
 msgstr ""
-"Configurer une nouvelle partie (ç-à-d les pièces dans leur position "
+" Configurer une nouvelle partie (ç-à-d les pièces dans leur position "
 "originale)."
 
 #: src/frontend/cmd.cc:1080
@@ -594,7 +602,7 @@ msgid ""
 " Inputs time left in game for computer in hundredths of a second.\n"
 " Mostly used by Internet Chess Server."
 msgstr ""
-"Entrer le temps laisser àdans le jeu à l’ordinateur en centièmes de "
+" Entrer le temps laisser àdans le jeu à l’ordinateur en centièmes de "
 "secondes.\n"
 "Principalement utilisé par Internet Chess Server."
 
@@ -679,8 +687,14 @@ msgid " Displays command line syntax."
 msgstr " Afficher la syntax de la ligne de commande."
 
 #: src/frontend/cmd.cc:1118
-msgid " board - displays the current board"
-msgstr " plateau - afficher le plateau actuel"
+msgid " black - displays the current board from black's point of view"
+msgstr " black (noir) - afficher le plateau actuel du point de vue du noir"
+
+msgid " white - displays the current board from white's point of view"
+msgstr " white (blanc) - afficher le plateau actuel du point de vue du blanc"
+
+msgid " board - displays the current board (deprecated)"
+msgstr " plateau - afficher le plateau actuel (obsolète)"
 
 #: src/frontend/cmd.cc:1119
 msgid " time - displays the time settings"
@@ -767,7 +781,7 @@ msgstr " Désactiver le mode graphique te jouer avec la vue classique."
 msgid ""
 " Displays the chessboard rank and file in both graphic and classical views."
 msgstr ""
-"Affichage des scores et du fichier dans les vues graphique et classique. "
+" Affichage des scores et du fichier dans les vues graphique et classique. "
 
 #: src/frontend/cmd.cc:1143
 #, fuzzy
@@ -820,12 +834,12 @@ msgstr "Un fichier nommé %s existe déjà.\n"
 #: src/frontend/pgn.cc:76
 #, c-format
 msgid "Overwrite file? [y/n]: "
-msgstr "Écraser le fichier ? [y/n] :"
+msgstr " Écraser le fichier ? [y/n] :"
 
 #: src/frontend/pgn.cc:80 src/frontend/pgn.cc:94
 #, c-format
 msgid "Invalid answer! "
-msgstr "Réponse incorrecte !"
+msgstr " Réponse incorrecte!"
 
 #: src/frontend/pgn.cc:87
 #, c-format

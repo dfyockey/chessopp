@@ -1,24 +1,26 @@
-# German translation of gnuchess.
+# German translation of chessopp.
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2013 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnuchess package.
-#
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2013, 2014, 2020.
+# This file is distributed under the same license as the chessopp package.
+# 
+# Translators:
+# David Yockey greatly assisted by Google Translate, 2020.
+# Mario Blättermann, 2013, 2014, 2020.
 # Roland Illig, 2018.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnuchess 6.2.6-pre3\n"
+"Project-Id-Version: chessopp 0.1\n"
 "Report-Msgid-Bugs-To: bug-gnu-chess@gnu.org\n"
 "POT-Creation-Date: 2020-05-16 16:28-0400\n"
-"PO-Revision-Date: 2020-04-09 23:15+0200\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
-"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2020-05-23 07:36-0400\n"
+"Last-Translator: David Yockey greatly assisted by Google Translate\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Bugs: Report translation errors to bug-chessopp@gnu.org\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/main.cc:328
 #, c-format
@@ -35,16 +37,17 @@ msgid "Option processing failed.\n"
 msgstr "Fehler bei Optionsverarbeitung.\n"
 
 #: src/main.cc:396
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Copyright (C) 2020 David Yockey\n"
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Based on GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
 "html>\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Beyogen auf GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "Lizenz GPLv3+: GNU GPL Version 3 oder höher <http://gnu.org/licenses/gpl."
 "html>\n"
 "Dies ist freie Software: Sie können sie ändern und weitergeben.\n"
@@ -333,6 +336,10 @@ msgstr ""
 msgid " -g, --graphic      enable graphic mode\n"
 msgstr " -g, --graphic      aktiviert den grafischen Modus\n"
 
+msgid " -b, --board        display board after each move (gnuchess mode)\n"
+msgstr ""
+" -b, --board       zeige das Spielfeld nach jeder Zug an (gnuchess Modus)\n"
+
 #: src/frontend/cmd.cc:811
 msgid ""
 " Options xboard and post are accepted without leading dashes\n"
@@ -355,26 +362,25 @@ msgstr ""
 
 #: src/frontend/cmd.cc:819
 msgid ""
-" The file 'gnuchess.ini' allows setting config options. See\n"
-" 'info gnuchess' for details. The file will be looked up in the current\n"
-" directory or, if not found there, in the directory pointed to by\n"
-" environment variable GNUCHESS_PKGDATADIR.\n"
+" The file 'chessopp.ini' allows setting config options. For details,\n"
+" see 'info gnuchess' (which substantially applies to and is installed\n"
+" with chessopp). The file will be looked up in the current directory\n"
+" or, if not found there, in the directory pointed to by environment\n"
+" variable CHESSOPP_PKGDATADIR.\n"
 "\n"
 msgstr ""
-" Die Datei »gnuchess.ini« ermöglicht die Angabe von Konfigurations-\n"
+" Die Datei »chessopp.ini« ermöglicht die Angabe von Konfigurations-\n"
 " optionen. Siehen »info gnuchess« für Details. Nach der Datei wird\n"
 " im aktuellen Verzeichnis oder in dem durch die Umgebungsvariable\n"
-" GNUCHESS_PKGDATADIR angegebenen Verzeichnis gesucht.\n"
+" CHESSOPP_PKGDATADIR angegebenen Verzeichnis gesucht.\n"
 "\n"
 
 #: src/frontend/cmd.cc:825
 msgid ""
-"Report bugs to <bug-gnu-chess@gnu.org>.\n"
+"Report bugs to <bug-chessopp@diffengine.net>.\n"
 "\n"
 msgstr ""
-"Melden Sie Fehler an <bug-gnu-chess@gnu.org>.\n"
-"Übersetzungsfehler melden Sie bitte an:\n"
-"<translation-team-de@lists.sourceforge.net>\n"
+"Melden Sie Fehler an <bug-chessopp@diffengine.net>.\n"
 "\n"
 
 #: src/frontend/cmd.cc:873 src/frontend/cmd.cc:1333
@@ -672,8 +678,15 @@ msgid " Displays command line syntax."
 msgstr " Zeigt die Befehlszeilensyntax an."
 
 #: src/frontend/cmd.cc:1118
-msgid " board - displays the current board"
-msgstr " board - zeigt das aktuelle Spielfeld an"
+msgid " black - displays the current board from black's point of view"
+msgstr " board - zeigt das aktuelle Spielfeld aus der Sicht von Schwarz an"
+
+msgid " white - displays the current board from white's point of view"
+msgstr " white - zeigt das aktuelle Spielfeld aus der Sicht von Weiß an"
+
+#, fuzzy
+msgid " board - displays the current board (deprecated)"
+msgstr " board - zeigt das aktuelle Spielfeld an (veraltet)"
 
 #: src/frontend/cmd.cc:1119
 msgid " time - displays the time settings"
@@ -742,7 +755,7 @@ msgstr " evalspeed - testet die Geschwindigkeit der Zugberechnung"
 
 #: src/frontend/cmd.cc:1135
 msgid " Shows moves from opening book."
-msgstr "Zeigt Züge aus dem Eröffnungsbuch an."
+msgstr " Zeigt Züge aus dem Eröffnungsbuch an."
 
 #: src/frontend/cmd.cc:1137
 msgid " Enables display board in graphic mode."

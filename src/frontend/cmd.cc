@@ -817,7 +817,7 @@ Play chess without an onscreen board.\n\n"), stdout );
       fputs( _("\
  -g, --graphic      enable graphic mode\n"), stdout );
        fputs( _("\
- -b, --board        show board after each move (gnuchess mode\n"), stdout );
+ -b, --board        display board after each move (gnuchess mode)\n"), stdout );
       fputs( _("\
 \n"), stdout );
       fputs( _("\
@@ -1137,7 +1137,7 @@ static const char * const helpstr[] = {
    "show",
    gettext_noop(" black - displays the current board from black's point of view"),
    gettext_noop(" white - displays the current board from white's point of view"),
-   gettext_noop(" board - displays the current board (deprecated synonym for white)"),
+   gettext_noop(" board - displays the current board (deprecated)"),
    gettext_noop(" time - displays the time settings"),
    gettext_noop(" moves - shows all moves using one call to routine"),
    gettext_noop(" escape - shows moves that escape from check using one call to routine"),

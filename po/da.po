@@ -1,21 +1,24 @@
-# Danish translation of gnuchess
+# Danish translation of chessopp
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2017 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnuchess package.
-# Joe Hansen <joedalton2@yahoo.dk>, 2017.
-#
+# This file is distributed under the same license as the chessopp package.
+# 
+# Translators:
+# David Yockey greatly assisted by Google Translate, 2020.
+# Joe Hansen, 2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnuchess 6.2.5-rc3\n"
+"Project-Id-Version: chessopp 0.1\n"
 "Report-Msgid-Bugs-To: bug-gnu-chess@gnu.org\n"
 "POT-Creation-Date: 2020-05-16 16:28-0400\n"
-"PO-Revision-Date: 2017-07-06 21:10+0200\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"PO-Revision-Date: 2020-05-21 15:27-0400\n"
+"Last-Translator: David Yockey greatly assisted by Google Translate\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Bugs: Report translation errors to bug-chessopp@gnu.org\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/main.cc:328
 #, fuzzy, c-format
@@ -33,16 +36,17 @@ msgid "Option processing failed.\n"
 msgstr "Indstillingen Processing (behandling) mislykkedes\n"
 
 #: src/main.cc:396
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Copyright (C) 2020 David Yockey\n"
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Based on GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
 "html>\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
-"Ophavsret %s Free Software Foundation, Inc.\n"
+"Baseret på GNU Chess 6.2.6\n"
+"Ophavsret %s David Yockey\n"
 "Licens GPLv3+: GNU GPL version 3 eller senere <http://gnu.org/licenses/gpl."
 "html>\n"
 "Dette er et frit program: Du kan frit ændre eller videredistribuere "
@@ -330,6 +334,11 @@ msgstr ""
 msgid " -g, --graphic      enable graphic mode\n"
 msgstr " -g, --graphic      aktiver grafisk tilstand\n"
 
+#, fuzzy
+msgid " -b, --board        display board after each move (gnuchess mode)\n"
+msgstr ""
+" -b, --board        Vis brættet efter hver flytning (gnuchess tilstand)\n"
+
 #: src/frontend/cmd.cc:811
 msgid ""
 " Options xboard and post are accepted without leading dashes\n"
@@ -351,23 +360,24 @@ msgstr ""
 
 #: src/frontend/cmd.cc:819
 msgid ""
-" The file 'gnuchess.ini' allows setting config options. See\n"
-" 'info gnuchess' for details. The file will be looked up in the current\n"
-" directory or, if not found there, in the directory pointed to by\n"
-" environment variable GNUCHESS_PKGDATADIR.\n"
+" The file 'chessopp.ini' allows setting config options. For details,\n"
+" see 'info gnuchess' (which substantially applies to and is installed\n"
+" with chessopp). The file will be looked up in the current directory\n"
+" or, if not found there, in the directory pointed to by environment\n"
+" variable CHESSOPP_PKGDATADIR.\n"
 "\n"
 msgstr ""
-" Filen »gnuchess.ini« giver mulighed for at angive konfigurations-\n"
+" Filen »chessopp.ini« giver mulighed for at angive konfigurations-\n"
 " tilvalg. Se »info gnuchess« for detaljer. Filen slås op i den\n"
 " nuværende mappe eller, hvis ikke fundet der, i mappen der peger på\n"
-" miljøvariablen GNUCHESS_PKGDATADIR.\n"
+" miljøvariablen CHESSOPP_PKGDATADIR.\n"
 
 #: src/frontend/cmd.cc:825
 msgid ""
-"Report bugs to <bug-gnu-chess@gnu.org>.\n"
+"Report bugs to <bug-chessopp@diffengine.net>.\n"
 "\n"
 msgstr ""
-"Rapporter fejl til <bug-gnu-chess@gnu.org>.\n"
+"Rapporter fejl til <bug-chessopp@diffengine.net>.\n"
 "\n"
 
 #: src/frontend/cmd.cc:873 src/frontend/cmd.cc:1333
@@ -660,8 +670,15 @@ msgid " Displays command line syntax."
 msgstr " Viser kommandolinjesyntaks."
 
 #: src/frontend/cmd.cc:1118
-msgid " board - displays the current board"
-msgstr " board (bræt) - viser det aktuelle bræt"
+msgid " black - displays the current board from black's point of view"
+msgstr " black (sort) - viser det aktuelle bræt fra sort synspunkt"
+
+msgid " white - displays the current board from white's point of view"
+msgstr " white (hvidt) - viser det aktuelle bræt fra hvidt synspunkt"
+
+#, fuzzy
+msgid " board - displays the current board (deprecated)"
+msgstr " board (bræt) - viser det aktuelle bræt (forældet)"
 
 #: src/frontend/cmd.cc:1119
 msgid " time - displays the time settings"

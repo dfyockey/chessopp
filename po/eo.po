@@ -1,22 +1,24 @@
 # Esperanto translation
+# Copyright (C) 2020 David Yockey
 # Copyright (C) 2013, 2016, 2018, 2020 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnuchess package.
-# Felipe Castro <fefcas@gmail.com>, 2013, 2016, 2018, 2020.
-#
+# This file is distributed under the same license as the chessopp package.
+# 
+# Translators:
+# David Yockey greatly assisted by Google Translate, 2020.
+# Felipe Castro, 2013, 2016, 2018, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnuchess 6.2.6-pre3\n"
+"Project-Id-Version: chessopp 0.1\n"
 "Report-Msgid-Bugs-To: bug-gnu-chess@gnu.org\n"
 "POT-Creation-Date: 2020-05-16 16:28-0400\n"
-"PO-Revision-Date: 2020-04-06 10:46-0300\n"
-"Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
-"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2020-05-22 10:53-0400\n"
+"Last-Translator: David Yockey greatly assisted by Google Translate\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Bugs: Report translation errors to bug-chessopp@gnu.org\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/main.cc:328
 #, c-format
@@ -33,16 +35,17 @@ msgid "Option processing failed.\n"
 msgstr "Procezado de modifilo malsukcesis.\n"
 
 #: src/main.cc:396
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Copyright (C) 2020 David Yockey\n"
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Based on GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
 "html>\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
-"Kopirajto (©) %s Free Software Foundation, Inc.\n"
+"Bazita sur GNU Chess 6.2.6\n"
+"Kopirajto (©) %s David Yockey\n"
 "Permeso GPLv3+: GNU GPL versio 3 aŭ posta <http://gnu.org/licenses/gpl."
 "html>\n"
 "Tio ĉi estas libera programaro: vi estas libera por ŝanĝi kaj redisdoni "
@@ -331,6 +334,11 @@ msgstr ""
 msgid " -g, --graphic      enable graphic mode\n"
 msgstr " -g, --graphic      ebligi grafika reĝimo\n"
 
+#, fuzzy
+msgid " -b, --board        display board after each move (gnuchess mode)\n"
+msgstr ""
+" -b, --board       montras la tabulon post ĉiu movo (gnuchess reĝimo)\n"
+
 #: src/frontend/cmd.cc:811
 msgid ""
 " Options xboard and post are accepted without leading dashes\n"
@@ -353,23 +361,24 @@ msgstr ""
 
 #: src/frontend/cmd.cc:819
 msgid ""
-" The file 'gnuchess.ini' allows setting config options. See\n"
-" 'info gnuchess' for details. The file will be looked up in the current\n"
-" directory or, if not found there, in the directory pointed to by\n"
-" environment variable GNUCHESS_PKGDATADIR.\n"
+" The file 'chessopp.ini' allows setting config options. For details,\n"
+" see 'info gnuchess' (which substantially applies to and is installed\n"
+" with chessopp). The file will be looked up in the current directory\n"
+" or, if not found there, in the directory pointed to by environment\n"
+" variable CHESSOPP_PKGDATADIR.\n"
 "\n"
 msgstr ""
-" La dosiero 'gnuchess.ini' permesas difini agordajn modifilojn.\n"
+" La dosiero 'chessopp.ini' permesas difini agordajn modifilojn.\n"
 " Konsultu 'info gnuchess' por detaloj. La dosiero estos serĉata en\n"
 " la kuranta dosierujo aŭ, se ne trovita tie, en la dosierujo indikita\n"
-" de la medi-variablo GNUCHESS_PKGDATADIR.\n"
+" de la medi-variablo CHESSOPP_PKGDATADIR.\n"
 
 #: src/frontend/cmd.cc:825
 msgid ""
-"Report bugs to <bug-gnu-chess@gnu.org>.\n"
+"Report bugs to <bug-chessopp@diffengine.net>.\n"
 "\n"
 msgstr ""
-"Raportu program-misojn al <bug-gnu-chess@gnu.org>.\n"
+"Raportu program-misojn al <bug-chessopp@diffengine.net>.\n"
 "\n"
 
 #: src/frontend/cmd.cc:873 src/frontend/cmd.cc:1333
@@ -662,8 +671,15 @@ msgid " Displays command line syntax."
 msgstr " Montras la sintakso de komand-linio."
 
 #: src/frontend/cmd.cc:1118
-msgid " board - displays the current board"
-msgstr " board - montras la kurantan tabulon"
+msgid " black - displays the current board from black's point of view"
+msgstr " black - montras la kurantan tabulon el la vidpunkto de nigra"
+
+msgid " white - displays the current board from white's point of view"
+msgstr " white - montras la kurantan tabulon el la vidpunkto de blankulo"
+
+#, fuzzy
+msgid " board - displays the current board (deprecated)"
+msgstr " board - montras la kurantan tabulon (malaktuala)"
 
 #: src/frontend/cmd.cc:1119
 msgid " time - displays the time settings"

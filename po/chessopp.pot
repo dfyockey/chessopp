@@ -34,8 +34,8 @@ msgstr ""
 #: src/main.cc:396
 #, c-format
 msgid ""
-"Copyright (C) 2020 David Yockey\n"
-"Copyright (C) %s Free Software Foundation, Inc.\n"
+"Based on GNU Chess 6.2.6\n"
+"Copyright (C) %s David Yockey\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
 "html>\n"
 "This is free software: you are free to change and redistribute it.\n"
@@ -311,6 +311,9 @@ msgstr ""
 msgid " -g, --graphic      enable graphic mode\n"
 msgstr ""
 
+msgid " -b, --board        display board after each move (gnuchess mode)\n"
+msgstr ""
+
 #: src/frontend/cmd.cc:811
 msgid ""
 " Options xboard and post are accepted without leading dashes\n"
@@ -327,16 +330,17 @@ msgstr ""
 
 #: src/frontend/cmd.cc:819
 msgid ""
-" The file 'gnuchess.ini' allows setting config options. See\n"
-" 'info gnuchess' for details. The file will be looked up in the current\n"
-" directory or, if not found there, in the directory pointed to by\n"
-" environment variable GNUCHESS_PKGDATADIR.\n"
+" The file 'chessopp.ini' allows setting config options. For details,\n"
+" see 'info gnuchess' (which substantially applies to and is installed\n"
+" with chessopp). The file will be looked up in the current directory\n"
+" or, if not found there, in the directory pointed to by environment\n"
+" variable CHESSOPP_PKGDATADIR.\n"
 "\n"
 msgstr ""
 
 #: src/frontend/cmd.cc:825
 msgid ""
-"Report bugs to <bug-gnu-chess@gnu.org>.\n"
+"Report bugs to <bug-chessopp@diffengine.net>.\n"
 "\n"
 msgstr ""
 
@@ -606,7 +610,13 @@ msgid " Displays command line syntax."
 msgstr ""
 
 #: src/frontend/cmd.cc:1118
-msgid " board - displays the current board"
+msgid " black - displays the current board from black's point of view"
+msgstr ""
+
+msgid " white - displays the current board from white's point of view"
+msgstr ""
+
+msgid " board - displays the current board (deprecated)"
 msgstr ""
 
 #: src/frontend/cmd.cc:1119
