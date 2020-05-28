@@ -3,7 +3,7 @@
    Copyright (C) 2020 David Yockey
    Copyright (c) 2001-2020 Free Software Foundation, Inc.
 
-   Chess Opponent is based on Gnu Chess.
+   Chess Opponent is based on GNU Chess.
 
    GNU Chess is based on the two research programs
    Cobalt by Chua Kong-Sian and Gazebo by Stuart Cracraft.
