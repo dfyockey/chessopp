@@ -27,7 +27,7 @@ common_mandeps = $(top_srcdir)/configure.ac
 # binary when any source file changes, only the main one.
 # Use -o so that the `missing' program can infer the output file.
 chessopp.1: $(top_srcdir)/src/main.cc $(top_srcdir)/src/frontend/cmd.cc $(common_mandeps)
-	$(HELP2MAN) --name='Chess Opponent' --info-page='chessopp' ../src/chessopp -o $@
+	$(HELP2MAN) --name='Chess Opponent' --section=6 --include='manmods' --info-page='gnuchess' ../src/chessopp -o $@
 
 CLEANFILES = ${man_MANS}
 DISTCLEANFILES = ${CLEANFILES}

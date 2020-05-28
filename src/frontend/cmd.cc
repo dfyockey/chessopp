@@ -788,7 +788,17 @@ void cmd_usage(void)
       printf ( _("\
 Usage: %s [OPTION]...\n\n"), progname );
       fputs( _("\
-Play chess without an onscreen board.\n\n"), stdout );
+Play chess without an onscreen board.\n\
+\n"), stdout );
+      fputs( _("\
+User plays on a physical board while inputing moves, reading Chess\n\
+Opponent's moves, and updating the physical board accordingly.\n\
+\n"), stdout );
+      fputs( _("\
+User moves are accepted either in standard algebraic notation (SAN) or\n\
+in coordinate algebraic notation. Chess Opponent's moves are displayed\n\
+in SAN.\n\
+\n"), stdout );
       fputs( _("Options:\n"), stdout );
       fputs( _("\
  -h, --help         display this help and exit\n"), stdout );
@@ -821,19 +831,15 @@ Play chess without an onscreen board.\n\n"), stdout );
       fputs( _("\
 \n"), stdout );
       fputs( _("\
- Options xboard and post are accepted without leading dashes\n\
- for backward compatibility.\n\
+Options xboard and post are accepted without leading dashes\n\
+for backward compatibility.\n\
 \n"), stdout );
       fputs( _("\
- Moves are accepted either in standard algebraic notation (SAN) or\n\
- in coordinate algebraic notation.\n\
-\n"), stdout );
-      fputs( _("\
- The file 'chessopp.ini' allows setting config options. For details,\n\
- see 'info gnuchess' (which substantially applies to and is installed\n\
- with chessopp). The file will be looked up in the current directory\n\
- or, if not found there, in the directory pointed to by environment\n\
- variable CHESSOPP_PKGDATADIR.\n\
+The file 'chessopp.ini' allows setting config options. For details,\n\
+see 'info gnuchess' (which substantially applies to and is installed\n\
+with chessopp). The file will be looked up in the current directory\n\
+or, if not found there, in the directory pointed to by environment\n\
+variable CHESSOPP_PKGDATADIR.\n\
 \n"), stdout );
       fputs( _("\
 Report bugs to <bug-chessopp@gnu.org>.\n\
