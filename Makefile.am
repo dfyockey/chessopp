@@ -29,12 +29,12 @@ dist_pkgdata_DATA = src/chessopp.ini src/smallbook.bin
 # For recognition and usage by GUIs
 pluginsdir=@PLUGINSDIR@
 engdir=$(pluginsdir)/xboard
-eng_DATA = misc/gnuchess.eng
+eng_DATA = misc/chessopp.eng
 logodir=$(pluginsdir)/logos
-logo_DATA = misc/gnuchess.png
+logo_DATA = misc/chessopp.png
 
 # Additional files to distribute.
-EXTRA_DIST = config.rpath TODO src/gnuchess.ini src/smallbook.bin src/gnuchessx src/gnuchessu doc/quotes.rb lib/gettext.h misc/gnuchess.eng misc/gnuchess.png
+EXTRA_DIST = config.rpath TODO src/chessopp.ini src/smallbook.bin src/chessoppx src/chessoppu doc/quotes.rb lib/gettext.h misc/chessopp.eng misc/chessopp.png
 
 DISTCLEANFILES = *~ src/GCint.h
 pkgdatadir =$(datadir)/chessopp
