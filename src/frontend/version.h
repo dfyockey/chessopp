@@ -1,8 +1,11 @@
 /* version.h
 
-   GNU Chess frontend
+   Chess Opponent frontend
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2011 Free Software Foundation, Inc.
+
+   Chess Opponent is based on GNU Chess.
 
    GNU Chess is based on the two research programs
    Cobalt by Chua Kong-Sian and Gazebo by Stuart Cracraft.
@@ -21,8 +24,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    Contact Info:
-     bug-gnu-chess@gnu.org
-     cracraft@ai.mit.edu, cracraft@stanfordalumni.org, cracraft@earthlink.net
+     bug-chessopp@gnu.org
 */
-#define PROGRAM	  "GNU Chess"
-#define AUTHOR	  "Chua Kong Sian / Stuart Cracraft"
+#define PROGRAM	  "Chess Opponent"
+#define AUTHOR	  "Many people... :)"
