@@ -123,7 +123,7 @@ void option_init() {
 
    option_set("OptionFile",optionFile);
 
-   option_set("EngineName","GNU Chess");
+   option_set("EngineName","Chess Opponent");
    option_set("EngineDir",".");
    option_set("EngineCommand","<empty>");
 
