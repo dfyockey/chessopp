@@ -571,12 +571,8 @@ leaf * ValidateMove (char *s, char *cleanMove)
    if (cleanMove) strcpy(cleanMove, mvstr);
 
    /* Check for castling */
-   /** Invalidated o-o and 0-0 as castling commands
-       because the Xboard adapter chokes on these commands 
-                                  -- D. Yockey, 20190809   **/
-   /* if (strcmp (mvstr, "O-O") == 0 || strcmp (mvstr, "o-o") == 0 || */
-   /*     strcmp (mvstr, "0-0") == 0)                                 */
-   if (strcmp (mvstr, "O-O") == 0)
+   if (strcmp (mvstr, "O-O") == 0 || strcmp (mvstr, "o-o") == 0 ||
+       strcmp (mvstr, "0-0") == 0)
    {
       if (cleanMove) strcpy(cleanMove, "O-O");
       if (side == white)
@@ -590,12 +586,8 @@ leaf * ValidateMove (char *s, char *cleanMove)
       return (IsInMoveList (1, f, t, ' '));
    }
 
-   /** Invalidated o-o-o and 0-0-0 as castling commands    
-       because the Xboard adapter chokes on these commands
-                                  -- D. Yockey, 20190809   **/
-   /* if (strcmp (mvstr, "O-O-O") == 0 || strcmp (mvstr, "o-o-o") == 0 || */
-   /*     strcmp (mvstr, "0-0-0") == 0)                                   */
-   if (strcmp (mvstr, "O-O-O") == 0)
+   if (strcmp (mvstr, "O-O-O") == 0 || strcmp (mvstr, "o-o-o") == 0 ||
+       strcmp (mvstr, "0-0-0") == 0)
    {
       if (cleanMove) strcpy(cleanMove, "O-O-O");
       if (side == white)
