@@ -4,5 +4,5 @@ Makefile.in
 GCint.h
 config.h
 configmake.h
-gnuchess
+chessopp
 stamp-h1

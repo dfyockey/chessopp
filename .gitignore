@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/c++,autotools
-# Edit at https://www.gitignore.io/?templates=c++,autotools
+# Based on a file created by https://www.toptal.com/developers/gitignore/api/c++,autotools
+# Edit at https://www.toptal.com/developers/gitignore?templates=c++,autotools
 
 ### Autotools ###
 # http://www.gnu.org/software/automake
@@ -48,9 +48,6 @@ m4/ltversion.m4
 m4/lt~obsolete.m4
 
 
-### Autotools Patch ###
-
-
 ### Additional ignored items listed in misc/svn-ignore-files.txt ###
 Makefile
 ABOUT-NLS
@@ -58,26 +55,31 @@ config.rpath
 m4
 
 ### Additional ignored items listed in misc/svn-ignore-files-doc.txt ###
+doc/gnuchess.info
 doc/mdate-sh
+doc/stamp-vti
 doc/texinfo.tex
 doc/version.texi
 
-
-### Additional items resulting from build that I want to ignore ###
-doc/gnuchess.info
-doc/stamp-vti
-man/gnuchess.1
+### Additional ignored items listed in misc/svn-ignore-files-man.txt ###
 man/chessopp.1
+
+### Additional ignored items listed in misc/svn-ignore-files-src.txt ###
 src/.deps/
 src/GCint.h
-src/adapter/.deps/
 src/config.h
 src/configmake.h
-src/engine/.deps/
-src/frontend/.deps/
-src/gnuchess
 src/chessopp
 src/stamp-h1
+
+### Additional ignored items listed in misc/svn-ignore-files-src-adapter.txt ###
+src/adapter/.deps/
+
+### Additional ignored items listed in misc/svn-ignore-files-src-engine.txt ###
+src/engine/.deps/
+
+### Additional ignored items listed in misc/svn-ignore-files-src-frontend.txt ###
+src/frontend/.deps/
 
 ### Translation-related files to ignore ###
 po/*.po~
@@ -119,5 +121,5 @@ po/remove-potcdate.sed
 *.out
 *.app
 
-# End of https://www.gitignore.io/api/c++,autotools
+# End of https://www.toptal.com/developers/gitignore/api/c++,autotools
 
