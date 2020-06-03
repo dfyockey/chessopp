@@ -47,20 +47,21 @@ m4/ltsugar.m4
 m4/ltversion.m4
 m4/lt~obsolete.m4
 
+
 ### Autotools Patch ###
 
-### Ignored items noted at Original Gnuchess Source Locations ###
-# https://svn.savannah.gnu.org/viewvc/chess/tags/v6.2.6/
 
+### Additional ignored items listed in misc/svn-ignore-files.txt ###
 Makefile
 ABOUT-NLS
 config.rpath
 m4
 
-# https://svn.savannah.gnu.org/viewvc/chess/tags/v6.2.6/doc/
-
+### Additional ignored items listed in misc/svn-ignore-files-doc.txt ###
 doc/mdate-sh
 doc/texinfo.tex
+doc/version.texi
+
 
 ### Additional items resulting from build that I want to ignore ###
 doc/gnuchess.info
