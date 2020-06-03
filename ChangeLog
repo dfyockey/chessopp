@@ -1,3 +1,19 @@
+ChangeLog of Chess Opponent
+
+Copyright (C) 2020 David Yockey
+Copyright (C) 2001-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+2020-05-05  David Yockey <dyockey@diffengine.net>
+
+	* Forked GNU Chess 6.2.6
+
+
+== GNU Chess ChangeLog file, incorporated herein in toto ==
+
 2020-04-18  Antonio Ceballos  <aceballos@gmail.com>
 
 	* ChangeLog: Release 6.2.6

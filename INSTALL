@@ -1,13 +1,30 @@
-INSTALL of GNU Chess
+INSTALL of Chess Opponent
 
+  Copyright (C) 2020 David Yockey
   Copyright (C) 2001-2012 Free Software Foundation, Inc.
 
   Copying and distribution of this file, with or without modification,
   are permitted in any medium without royalty provided the copyright
   notice and this notice are preserved.
 
-The usual procedure should apply. After you have unpacked
-the sources, type (in the sources top-level directory)
+
+IMPORTANT NOTE:
+{
+  To build Chess Opponent from code checked out or cloned from a version
+  control system such as Subversion or Git, you must first execute the
+  command
+
+	autoreconf --install
+
+  before continuing with the usual installation procedure. This need be
+  done only once after checkout; the checked out code may be then be
+  configured and/or made repeatedly as needed without reexecuting the
+  autoreconf command.
+}
+
+Otherwise, the usual procedure should apply. After you have unpacked
+the sources (or checked-out/cloned and autoreconf'ed them), type (in
+the sources top-level directory)
 
 	./configure
 	make
@@ -22,10 +39,10 @@ CFLAGS="-O3 -ffast-math" ./configure
 The build should work with gcc. It should also work with other
 compilers.
 
-Test gnuchess by typing
+Test chessopp by typing
 
 	cd src
-	./gnuchess on GNU/Linux / Unix / Mac OS X
+	./chessopp on GNU/Linux / Unix / Mac OS X
 	easy
 	new
 	post
@@ -56,11 +73,11 @@ than /usr/local, replace the first line by
 	./configure --prefix=/my/favourite/dir 
 
 You can build an opening book which may enhance the value
-of gnuchess quite a lot. In order to do so, get the file
+of chessopp quite a lot. In order to do so, get the file
 book_1.02.pgn (http://ftp.gnu.org/gnu/chess/book_1.02.pgn.gz)
 and type the following.
 
-	./gnuchess
+	./chessopp
 	book add book_1.02.pgn
 	quit
 
@@ -70,17 +87,17 @@ If you want a smaller book or you do not want to wait, do the
 following instead:
 
 	head -30000 book_1.02.pgn > smallbook.pgn
-	./gnuchess
+	./chessopp
 	book add smallbook.pgn
 	quit
 
 This will make a much smaller book.
 
-In order to use the book, edit gnuchess.ini and set the value of
+In order to use the book, edit chessopp.ini and set the value of
 'Book' or 'OwnBook' to true.
 
 You can run the program in UCI mode, which makes it externally behave as 
 a UCI engine. This is not intended for interactive usage, but for backend 
 engine of a UCI-enabled chess graphical interface. Type the following:
 
-	./gnuchess -u
+	./chessopp -u
