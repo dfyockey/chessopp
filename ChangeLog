@@ -7,6 +7,19 @@ Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
 notice and this notice are preserved.
 
+2020-05-05­—2020-06-02  David Yockey <dyockey@diffengine.net>
+
+	* Renamed the forked version of "GNU Chess" to "Chess Opponent", making
+	  required changes throughout the source code and documentation
+	* Modified to preclude board display unless directly requested
+	* Added commands and support for showing the board from either black or
+	  white perspective
+	* Blocked use of "king slide" castling which would otherwise be improperly
+	  handled
+	* Modified translations in accordance with new name and features
+	* Moved man page from section 1 (Executable programs or shell commands) to
+	  section 6 (Games)
+
 2020-05-05  David Yockey <dyockey@diffengine.net>
 
 	* Forked GNU Chess 6.2.6
