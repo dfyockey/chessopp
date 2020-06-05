@@ -67,6 +67,12 @@ by default /usr/local, become root and type
 
 	make install
 
+Note: If, after installation, chessopp cannot access chessopp.ini
+when launched, permissions of the directory containing chessopp.ini
+may need to be adjusted. A umask of the account in which the
+installation is run that differs from the usual 0022 can cause
+this problem.
+
 If you want to install the sources in some other directory
 than /usr/local, replace the first line by
 
