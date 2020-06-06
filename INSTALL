@@ -8,23 +8,23 @@ INSTALL of Chess Opponent
   notice and this notice are preserved.
 
 
-IMPORTANT NOTE:
+IMPORTANT NOTE FOR VERSION CONTROL SYSTEM USERS
+(e.g. Subversion, Git, GitLab, GitHub, etc.)
 {
   To build Chess Opponent from code checked out or cloned from a version
-  control system such as Subversion or Git, you must first execute the
-  command
+  control system, you must first execute the command
 
 	autoreconf --install
 
-  before continuing with the usual installation procedure. This need be
+  before continuing with the usual build/install procedure. This need be
   done only once after checkout; the checked out code may be then be
   configured and/or made repeatedly as needed without reexecuting the
   autoreconf command.
 }
 
-Otherwise, the usual procedure should apply. After you have unpacked
-the sources (or checked-out/cloned and autoreconf'ed them), type (in
-the sources top-level directory)
+After you have unpacked the sources (or checked-out/cloned and
+autoreconf'ed them as discussed above), the usual procedure should apply.
+In the sources top-level directory, type
 
 	./configure
 	make
@@ -34,7 +34,7 @@ to configure, just type ./configure --help for advice. In particular,
 you may experiment with compiler optimization flags, which are added
 easily as (assuming you have a bourne-type shell)
 
-CFLAGS="-O3 -ffast-math" ./configure
+	CFLAGS="-O3 -ffast-math" ./configure
 
 The build should work with gcc. It should also work with other
 compilers.
