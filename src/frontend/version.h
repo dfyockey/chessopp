@@ -24,7 +24,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    Contact Info:
-     bug-chessopp@gnu.org
+     bug-chessopp@diffengine.net
 */
 #define PROGRAM	  "Chess Opponent"
 #define AUTHOR	  "Many people... :)"

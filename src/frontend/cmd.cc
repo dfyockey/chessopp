@@ -842,7 +842,7 @@ or, if not found there, in the directory pointed to by environment\n\
 variable CHESSOPP_PKGDATADIR.\n\
 \n"), stdout );
       fputs( _("\
-Report bugs to <bug-chessopp@gnu.org>.\n\
+Report bugs to <bug-chessopp@diffengine.net>.\n\
 \n"), stdout );
      }
 
