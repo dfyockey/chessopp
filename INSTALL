@@ -8,22 +8,18 @@ INSTALL of Chess Opponent
   notice and this notice are preserved.
 
 
-IMPORTANT NOTE FOR VERSION CONTROL SYSTEM USERS
+IMPORTANT NOTE for VERSION CONTROL SYSTEM USERS
 (e.g. Subversion, Git, GitLab, GitHub, etc.)
 {
-  To build Chess Opponent from code checked out or cloned from a version
-  control system, you must first execute the command
+  To build Chess Opponent from code aquired from
+  a version control system, you must first execute the command
 
 	autoreconf --install
 
-  before continuing with the usual build/install procedure. This need be
-  done only once after checkout; the checked out code may be then be
-  configured and/or made repeatedly as needed without reexecuting the
-  autoreconf command.
+  before continuing with the usual procedure.
 }
 
-After you have unpacked the sources (or checked-out/cloned and
-autoreconf'ed them as discussed above), the usual procedure should apply.
+After you have unpacked the sources, the usual procedure should apply.
 In the sources top-level directory, type
 
 	./configure
@@ -66,12 +62,6 @@ If you want to install the software in some global directory,
 by default /usr/local, become root and type
 
 	make install
-
-Note: If, after installation, chessopp cannot access chessopp.ini
-when launched, permissions of the directory containing chessopp.ini
-may need to be adjusted. A umask of the account in which the
-installation is run that differs from the usual 0022 can cause
-this problem.
 
 If you want to install the sources in some other directory
 than /usr/local, replace the first line by
