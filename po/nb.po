@@ -8,18 +8,20 @@
 # Johnny A. Solbu, 2014-2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: chessopp 0.1\n"
+"Project-Id-Version: chessopp 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/dfyockey/chessopp/issues\n"
 "POT-Creation-Date: 2020-06-16 14:56-0400\n"
-"PO-Revision-Date: 2020-05-22 13:27-0400\n"
+"PO-Revision-Date: 2020-06-17 17:05-0400\n"
 "Last-Translator: David Yockey greatly assisted by Google Translate\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to https://github.com/dfyockey/chessopp/issues\n"
+"X-Bugs: Report translation errors to https://github.com/dfyockey/chessopp/"
+"issues\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.3\n"
+"Language-Team: \n"
 
 #: src/main.cc:330
 #, fuzzy, c-format

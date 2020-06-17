@@ -11,7 +11,7 @@ dnl This program is distributed in the hope that it will be useful, but
 dnl WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 dnl implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-AC_INIT([Chess Opponent], [0.2], [https://github.com/dfyockey/chessopp/issues], [chessopp])
+AC_INIT([Chess Opponent], [1.0.0], [https://github.com/dfyockey/chessopp/issues], [chessopp])
 AC_PREREQ(2.69)
 AC_COPYRIGHT(Copyright (C) 2020 David Yockey)
 AC_CONFIG_HEADERS(src/config.h)
