@@ -24,7 +24,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    Contact Info:
-     bug-chessopp@diffengine.net
+     https://github.com/dfyockey/chessopp/issues
 */
 
 #include <stdio.h>
@@ -841,10 +841,9 @@ with chessopp). The file will be looked up in the current directory\n\
 or, if not found there, in the directory pointed to by environment\n\
 variable CHESSOPP_PKGDATADIR.\n\
 \n"), stdout );
-      fputs( _("\
-Report bugs to <bug-chessopp@diffengine.net>.\n\
-\n"), stdout );
-     }
+      fprintf(stdout, _("Report bugs to <%s>\n\n"),
+              "https://github.com/dfyockey/chessopp/issues");
+}
 
 
 /* Play variant, we instruct interface in protover we play normal */

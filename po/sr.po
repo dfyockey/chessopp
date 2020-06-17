@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnuchess-6.2.6-pre2\n"
-"Report-Msgid-Bugs-To: bug-chessopp@diffengine.net\n"
+"Report-Msgid-Bugs-To: https://github.com/dfyockey/chessopp/issues\n"
 "POT-Creation-Date: 2020-06-16 14:56-0400\n"
 "PO-Revision-Date: 2020-05-22 15:17-0400\n"
 "Last-Translator: David Yockey greatly assisted by Google Translate\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.3\n"
-"X-Bugs: Report translation errors to bug-chessopp@diffengine.net\n"
+"X-Bugs: Report translation errors to https://github.com/dfyockey/chessopp/issues\n"
 
 #: src/main.cc:330
 #, c-format
@@ -388,9 +388,9 @@ msgstr ""
 #: src/frontend/cmd.cc:844
 #, fuzzy
 msgid ""
-"Report bugs to <bug-chessopp@diffengine.net>.\n"
+"Report bugs to <%s>.\n"
 "\n"
-msgstr "Пријавите грешке на <bug-chessopp@diffengine.net>.\n"
+msgstr "Пријавите грешке на <%s>.\n"
 
 #: src/frontend/cmd.cc:892 src/frontend/cmd.cc:1361
 #, c-format

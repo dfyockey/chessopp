@@ -22,7 +22,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    Contact Info:
-     bug-chessopp@diffengine.net
+     https://github.com/dfyockey/chessopp/issues
 */
 
 #include "components.h"
