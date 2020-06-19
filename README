@@ -7,16 +7,53 @@ README of Chess Opponent
   are permitted in any medium without royalty provided the copyright
   notice and this notice are preserved.
 
-Chess Opponent is based on GNU Chess.
 
-For the latest information on the Chess Opponent project, visit:
+  **Description**
 
-   # Insert URL here!!!
+  Run in a terminal, Chess Opponent facilitates play chess without an onscreen board.
 
-For the latest information on the GNU Chess project, visit:
+  The user plays on a physical board while inputing moves, reading Chess Opponent's
+  moves from the screen, and updating the physical board accordingly.
 
-   http://www.gnu.org/software/chess/
+  User moves are accepted either in standard algebraic notation (SAN) or in
+  coordinate notation. Chess Opponent's moves are displayed in SAN.
 
-See INSTALL for installation instructions. 
+  A SAN cheat sheet is freely available from
+  https://cheatography.com/davechild/cheat-sheets/chess-algebraic-notation/.
 
-See doc directory for documentation.
+  Brief list of useful commands:
+
+    go           Use at start of game to play black
+
+    undo         Back up one move in game history
+    remove       Back up two moves in game history
+
+    show black   Show board from black's perspective
+    show white   Show board from white's perspective
+
+    coords       Include rank and file notation along edges when board is shown
+    nocoords     Disable coords setting
+
+    help         Show a list of available commands
+
+
+  **Additional Information**
+
+  Chess Opponent is based on GNU Chess.
+
+  For the latest information on the Chess Opponent project, visit:
+
+	https://github.com/dfyockey/chessopp/
+
+  For the latest information on the GNU Chess project, visit:
+
+	http://www.gnu.org/software/chess/
+
+  See INSTALL for installation instructions.
+
+  See man directory for Chess Opponent `man` documentation.
+  To view this documentation prior to installing, execute the command
+
+	man -l chessopp.1
+
+  See doc directory for GNU Chess documentation.

@@ -10,14 +10,14 @@ INSTALL of Chess Opponent
 
 IMPORTANT NOTE for VERSION CONTROL SYSTEM USERS
 (e.g. Subversion, Git, GitLab, GitHub, etc.)
-{
+
   To build Chess Opponent from code aquired from
   a version control system, you must first execute the command
 
 	autoreconf --install
 
   before continuing with the usual procedure.
-}
+
 
 After you have unpacked the sources, the usual procedure should apply.
 In the sources top-level directory, type
