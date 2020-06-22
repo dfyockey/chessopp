@@ -28,6 +28,8 @@ README of Chess Opponent
     undo         Back up one move in game history
     remove       Back up two moves in game history
 
+    show         Show board from user's color perspective
+
     show black   Show board from black's perspective
     show white   Show board from white's perspective
 

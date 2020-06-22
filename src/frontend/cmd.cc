@@ -951,11 +951,11 @@ void cmd_show (void)
  ************************************************************************/
 {
    /* TODO Remove gettext support */
-   if (tokeneq (token[1], "board") || tokeneq (token[1], "white")) {
+   if (tokeneq (token[1], "white") || ((tokeneq (token[1], "board") || tokeneq (token[1], "")) && board.side == 0)) {
       /* Show standard orientation with white at bottom */
       ShowBoard ();
    }
-   else if (tokeneq (token[1], "black")) {
+   else if (tokeneq (token[1], "black") || ((tokeneq (token[1], "board") || tokeneq (token[1], "")) && board.side == 1)) {
       /* Show 180°-rotated orientation with black at bottom */
       ShowRotatedBoard ();
    }
@@ -1140,17 +1140,17 @@ static const char * const helpstr[] = {
    "usage",
    gettext_noop(" Displays command line syntax."),
    "show",
-   gettext_noop(" black - displays the current board from black's point of view"),
-   gettext_noop(" white - displays the current board from white's point of view"),
-   gettext_noop(" board - displays the current board (deprecated)"),
-   gettext_noop(" time - displays the time settings"),
-   gettext_noop(" moves - shows all moves using one call to routine"),
-   gettext_noop(" escape - shows moves that escape from check using one call to routine"),
-   gettext_noop(" noncapture - shows non-capture moves"),
-   gettext_noop(" capture - shows capture moves"),
-   gettext_noop(" eval [or score] - shows the evaluation per piece and overall"),
-   gettext_noop(" game - shows moves in game history"),
-   gettext_noop(" pin - shows pinned pieces"),
+   gettext_noop("  Usage: alone or with one of the following commands (i.e. show <cmd>)"),
+   gettext_noop("  ------------"),
+   gettext_noop("  -no cmd-   - displays the current board from player's color perspective"),
+   gettext_noop("  black      - displays the current board from black's perspective"),
+   gettext_noop("  white      - displays the current board from white's perspective"),
+   gettext_noop("  time       - displays the time settings"),
+   gettext_noop("  moves      - shows all moves using one call to routine"),
+   gettext_noop("  escape     - shows moves that escape from check using one call to routine"),
+   gettext_noop("  noncapture - shows non-capture moves"),
+   gettext_noop("  capture    - shows capture moves"),
+   gettext_noop("  game       - shows moves in game history"),
    "test",
    gettext_noop(" movelist - reads in an epd file and shows legal moves for its entries"),
    gettext_noop(" capture - reads in an epd file and shows legal captures for its entries"),
@@ -1185,11 +1185,13 @@ void cmd_help (void)
    if (strlen(token[1])>0) {
       for (p=helpstr, count=0; *p; p++) {
         if (strncmp(*p, token[1], strlen(token[1])) == 0) {
+           puts("");
            puts(*p);
            while (*++p && **p != ' ') /* Skip aliases */ ;
            for (; *p && **p == ' '; p++) {
               puts(_(*p));
            }
+           puts("");
            return;
         }
       }

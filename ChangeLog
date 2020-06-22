@@ -7,7 +7,15 @@ Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
 notice and this notice are preserved.
 
-2020-06-??  David Yockey <dyockey@diffengine.net>
+2020-06-22  David Yockey <dyockey@diffengine.net>
+
+	* Changed `show` command with no argument and `show board` to show board
+	  in player's color perspective.
+	* Removed in-game help info for unsupported `show` commands `eval`,
+	  `score`, and `pin`.
+	* Improved in-game help formatting, especially the `show` command.
+
+2020-06-19  David Yockey <dyockey@diffengine.net>
 
 	* Forked GNU Chess 6.2.6
 	* Renamed the forked version from "GNU Chess" to "Chess Opponent", making
