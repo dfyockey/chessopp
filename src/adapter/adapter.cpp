@@ -1,8 +1,11 @@
 /* adapter.cpp
 
-   GNU Chess protocol adapter
+   Chess Opponent protocol adapter
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2012 Free Software Foundation, Inc.
+
+   Chess Opponent is based on GNU Chess.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -340,7 +343,7 @@ static void xboard_step() {
 
       mess();
 
-   } else if (match(string,"go")) {
+   } else if (match(string,"go") || match(string,"b")) { // b is user color choice (from Chess Opponent v1)
 
       State->computer[game_turn(Game)] = true;
       State->computer[colour_opp(game_turn(Game))] = false;
@@ -351,6 +354,8 @@ static void xboard_step() {
 
       mess();
 
+   } else if ( match(string,"w") ) { // user color choice (from Chess Opponent v1)
+	   // nop
    } else if (match(string,"hard")) {
 
       XB->ponder = true;

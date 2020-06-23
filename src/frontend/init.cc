@@ -1,8 +1,11 @@
 /* init.c
 
-   GNU Chess frontend
+   Chess Opponent frontend
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2011 Free Software Foundation, Inc.
+
+   Chess Opponent is based on GNU Chess.
 
    GNU Chess is based on the two research programs
    Cobalt by Chua Kong-Sian and Gazebo by Stuart Cracraft.
@@ -21,8 +24,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    Contact Info:
-     bug-gnu-chess@gnu.org
-     cracraft@ai.mit.edu, cracraft@stanfordalumni.org, cracraft@earthlink.net
+     https://github.com/dfyockey/chessopp/issues
 */
 
 #include <stdio.h>
@@ -431,6 +433,7 @@ void InitVars (void)
 
    board.flag |= (WCASTLE | BCASTLE);
    RealSide = board.side = white;
+   ChooseSide = 1;	// true
    board.ep = -1;
    board.king[white] = E1;
    board.king[black] = E8;

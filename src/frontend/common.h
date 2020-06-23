@@ -315,6 +315,7 @@ extern GameRec Game[MAXGAMEDEPTH];
 extern int RealGameCnt;
 extern short RealSide;
 extern int GameCnt;
+extern int ChooseSide;
 extern int computer;
 extern unsigned int flags;
 extern unsigned int extraflags;  /* Added game flag storage space */

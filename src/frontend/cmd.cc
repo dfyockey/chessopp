@@ -938,6 +938,16 @@ void cmd_xboard(void)
   }
 }
 
+void cmd_usrblack(void)
+{
+	cmd_go();
+}
+
+void cmd_usrwhite(void)
+{
+	// nop
+}
+
 /*
  * Command with subcommands, could write secondary method
  * tables here
@@ -1294,6 +1304,8 @@ const struct methodtable commands[] = {
   { "xboard", cmd_xboard },
   { "coords", cmd_coords},
   { "nocoords", cmd_nocoords},
+  { "b", cmd_usrblack },
+  { "w", cmd_usrwhite },
   { NULL, NULL }
 };
 

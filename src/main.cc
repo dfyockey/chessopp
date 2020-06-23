@@ -63,6 +63,7 @@ GameRec Game[MAXGAMEDEPTH];
 int GameCnt;
 int RealGameCnt;
 short RealSide;
+int ChooseSide;
 int computer;
 unsigned int flags;
 unsigned int extraflags;

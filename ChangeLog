@@ -7,6 +7,10 @@ Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
 notice and this notice are preserved.
 
+2020-06-23  David Yockey <dyockey@diffengine.net>
+
+	* Added query to select color to play at start of game.
+
 2020-06-22  David Yockey <dyockey@diffengine.net>
 
 	* Changed `show` command with no argument and `show board` to show board

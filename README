@@ -21,9 +21,12 @@ README of Chess Opponent
   A SAN cheat sheet is freely available from
   https://cheatography.com/davechild/cheat-sheets/chess-algebraic-notation/.
 
-  Brief list of useful commands:
+  Brief list of useful in-game commands:
 
-    go           Use at start of game to play black
+    b            Use at start of game to play black
+    w            Use at start of game to play white
+
+    go           Have the computer play the current color (i.e. switch sides)
 
     undo         Back up one move in game history
     remove       Back up two moves in game history
@@ -35,6 +38,8 @@ README of Chess Opponent
 
     coords       Include rank and file notation along edges when board is shown
     nocoords     Disable coords setting
+
+    new          Start a new game
 
     help         Show a list of available commands
 
