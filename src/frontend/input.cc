@@ -157,7 +157,7 @@ void *input_func(void *arg __attribute__((unused)) )
     get_line(prompt);
 
     // If at first they do not choose, try, try again. :)
-    if (ChooseSide){
+    if (!(flags & XBOARD) && ChooseSide){
 	if ( strcmp(userinputstr,"b\n") != 0 && strcmp(userinputstr,"w\n") != 0 )
             continue;
         else
