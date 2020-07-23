@@ -1,7 +1,8 @@
 /* eval.cpp
 
-   GNU Chess engine
+   Chess Opponent engine
 
+   Copyright (C) 2020 David Yockey
    Copyright (C) 2001-2011 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
@@ -24,6 +25,7 @@
 // includes
 
 #include <cstdlib> // for abs()
+#include <unistd.h> // for sleep()
 
 #include "attack.h"
 #include "board.h"
@@ -108,6 +110,13 @@ static const int FreePasser = 60;
 static const int AttackerDistance = 5;
 static const int DefenderDistance = 20;
 
+// Vigilance determines the distractability of the computer when
+// executing the eval() function. The thread in which eval() runs is
+// interrupted by a sleep() call once every number of calls to eval()
+// as specified the Vigilance value. A Vigilance value of 0 causes
+// eval() to be as alert as possible, i.e. sleep() is never called.
+static const int Vigilance = 20;
+
 // "constants"
 
 static const int KingAttackWeight[16] = {
@@ -119,6 +128,8 @@ static const int KingAttackWeight[16] = {
 static int MobUnit[ColourNb][PieceNb];
 
 static int KingAttackUnit[PieceNb];
+
+static int throttleCount;
 
 // prototypes
 
@@ -225,6 +236,8 @@ void eval_init() {
    KingAttackUnit[BB] = 1;
    KingAttackUnit[BR] = 2;
    KingAttackUnit[BQ] = 4;
+
+   throttleCount = 1;
 }
 
 // eval()
@@ -286,6 +299,22 @@ int eval(const board_t * board) {
    eval_king(board,mat_info,&opening,&endgame);
    eval_passer(board,pawn_info,&opening,&endgame);
    eval_pattern(board,&opening,&endgame);
+
+   if ( Vigilance && ++throttleCount >= Vigilance ) {
+     throttleCount = 1;
+
+     // Arbitrary thread delay (10µs) to prevent 100% CPU usage.
+     // Delay from the function call itself with 0 arg would be work,
+     // but a short delay is provided in case a 0 sleep call is ever
+     // optimized out of the code.
+     sleep(0.000010);
+     // The function pthread_yield() with the appropriate
+     // header file was tried as an alternative to sleep() but didn't
+     // provide the same effect. It's guessed that pthread_yield()
+     // causes the thread to yield if there's something else to do,
+     // while sleep() always suspends the thread for at least the
+     // proscribed period.
+   }
 
    // phase mix
 
